@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+#wrapper{
+    width: 800px;
+    margin: 50px auto;
+    
+}
+header{
+    height: 400px;
+    background-image: url(../image/matheus-cenali-wXuzS9xR49M-unsplash\ \(2\).jpg);
+    background-size: cover;
+    position: relative;
+}
+header > .bg{
+    background-color: rgba(0, 0 , 0,0.5);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+header > .bg > h1{
+    color: aliceblue;
+    margin: 20px 50px;
+}
+header > .bg > p{
+    color: orange;
+    margin: 15px 30px;
+    font-weight: bolder;
+}
+.title{
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+.detail{
+    border: 1px solid #777;
+    text-align: center;
+    padding: 30px 0;
+}
+.detail > h2{
+    color: red;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.detail span{ /*하위관계일때는 스페이스로 한칸 띄어준다 */
+    color: #00f;
+}
