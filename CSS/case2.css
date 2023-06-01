@@ -23,7 +23,7 @@ nav > a{
     padding: 20px;
     /* display: inline-block; */
 }
-    nav > a:hover{
+nav > a:hover{
         background-color:  #666;
 }
     /* '>' 기호는 CSS에서 자식 선택자(child selector)라고 불립니다.
