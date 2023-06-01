@@ -10,6 +10,7 @@ header{
     height: 400px;
     background-image: url(../image/premium_photo-1674939148088-d71acc1541ff.avif);
     background-size: cover;
+
 }
 nav{
     background-color: black;
@@ -87,12 +88,15 @@ section#navi > div.img{
     background-image: url(../image/map.avif);
     background-size: cover;
 }
+
 p{
     padding: 10px
 }
 
 ol{
     padding: 10px;
+    width: 50%;
+    /* float: left; */
 }
 li{
     padding: 5px;
@@ -100,6 +104,32 @@ li{
 section#choice > div.img{
     background-image: url(../image/coffee\ man\ woman.avif);
     background-size: cover;
+    position: relative;
     float: right;
+    bottom: 210px;
+    border-radius: 45%;
 }
+footer{
+    text-align: center;
+    background-color: black;
+    color: #fbfbfb;
+}
+a.home{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+    /* display: inline-block; 포지션을 픽시드로 하면 자동으로 인라인형 태그가 블럭형으로 바뀐다*/
+    width: 100px;
+    height: 100px;
+    background-color: rgb(232, 15, 127);
+    color: #fbfbfb;
+    text-align: center;
+    line-height: 100px;
+    /* CSS의 line-height 속성은 텍스트 줄의 높이를 조정하는 데 사용됩니다. 이 속성은 텍스트의 줄 간격을 결정하며, 픽셀(px), 상대적 크기(em, rem) 또는 비율(%, number)로 지정할 수 있습니다.
 
+    line-height: 100px;는 줄 간격을 100픽셀로 설정하는 것을 의미합니다. 이는 텍스트 줄의 높이가 100픽셀로 설정되며, 텍스트가 세로로 중앙 정렬되는 효과를 줄 수 있습니다.
+
+    줄 간격을 지정하는 것은 텍스트의 가독성과 레이아웃에 영향을 줄 수 있습니다. 특히 텍스트 블록 내에서 여러 줄이 있는 경우, line-height 속성은 줄 사이의 간격을 조정하여 텍스트가 더 읽기 쉽고 조화로운 모습을 갖도록 도와줍니다. */
+    border-radius: 100%;
+}
