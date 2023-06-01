@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case2-exam</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #wrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+        /* header content */
+        header{
+            height: 400px;
+            background-image: url(../image/premium_photo-1674939148088-d71acc1541ff.avif);
+            background-size: cover;
+        }
+        nav{
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        nav > a{
+            text-decoration: none;
+            color: #fff;
+            padding: 20px;
+        }
+        nav > a:hover{
+                background-color:  #666;
+        }
+        section > div{
+            float: left;
+            margin: 20px;
+        }
+        section{
+            padding: 30px
+        }
+        section::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        section > div{
+            float: left;
+            margin: 20px;
+        }
+        section > h1{
+            margin: 10px 0;
+        }
+        section > div.img{
+            width: 300px;
+            height: 200px;
+        }
+        section#info > div.img{
+            background-image: url(../image/coffee_3_cups.avif);
+            background-size: cover;
+        }
+        section#navi > div.img{
+            background-image: url(../image/map.avif);
+            background-size: cover;
+        }
+        p{
+            padding: 10px
+        }
+
+        ol{
+            padding: 10px;
+        }
+        li{
+            padding: 5px;
+        }
+        section#choice > div.img{
+            background-image: url(../image/coffee\ man\ woman.avif);
+            background-size: cover;
+            float: right;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <a href="#">카페소개</a>
+                <a href="#">오시는 길</a>
+                <a href="#">이 달의 추천</a>
+            </nav>
+        </header>
+        <section id="info">
+            <h1 >카페소개</h1>
+            <div class="img"></div>
+            <div class="text">
+                <p>영업시간 : 오전 9시 ~ 밤 10시</p>
+                <p>휴무 : 매주 수요일</p>
+                <small>(수요일이 공휴일일 경우 수요일 영업, 다음날 휴무)</small>
+            </div>
+        </section>
+        <section id="navi">
+            <h1>오시는 길</h1>
+            <div class="img"></div>
+            <div class="text">
+                <p>서귀표시 안덕면 사계리 0000-000</p>
+                <p>제주 올레 10코스 산방산 근처</p>
+            </div>
+        </section>
+        <section id="choice">
+            <h1>이 달의 추천</h1>
+            <div class="text">
+                <h3>핸드드립 아이스커피</h3>
+                <ol>
+                    <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다</li>
+                    <li>평상시 보다 원두의 양은 2배 정도(20g)정도와 추출액은 얼음 포함해서 200cc까지 내린다</li>
+                    <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다</li>
+                </ol>
+            </div>
+            <div class="img"></div>
+        </section>
+        <footer>
+            <p>my time with coffee</p>
+        </footer>
+    </div>
+</body>
+</html>
