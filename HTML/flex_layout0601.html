@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout-flex</title>
+    <style>
+        div.item{
+            width: 200px;
+            height: 100px;
+        }
+        .container{
+            /* height: 500px; */
+            display: flex;
+            /* display: inline-flex
+            /* flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            /* align-content: flex-end;  */
+            /* align-items: stretch; */
+        }
+        div.item:nth-of-type(1){height: 100px;}
+        div.item:nth-of-type(2){
+            height: 50px;
+            order: 1;    
+        }
+        /* 다른 div의 각각의 아이템의 기본 order값은 0이다  1을 2번 아이템의 oder값으로 부여하면 맨 마지막에 배치된다*/
+        div.item:nth-of-type(3){height: 150px;}
+        div.item:nth-of-type(4){
+            height: 100px;
+            order: -1;
+        }
+        /* 음수값도 적용 가능하다 */
+        div.item:nth-of-type(5){height: 50px;}
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: gray;">
+        <div class="item" style="background-color: blue;">item1</div>
+        <div class="item" style="background-color: blueviolet;">item2</div>
+        <div class="item" style="background-color: aqua;">item3</div>
+        <div class="item" style="background-color: rgb(17, 229, 49);">item4</div>
+        <div class="item" style="background-color: rgb(254, 8, 218);">item5</div>
+    </div>
+    <div>aaaaa</div>
+</body>
+</html>
