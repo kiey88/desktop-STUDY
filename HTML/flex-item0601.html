@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox-item</title>
+    <style>
+        /* flex-grow > flex-shrink > flex-basis 
+        flex-grow는 CSS의 Flexbox 레이아웃 속성 중 하나입니다. Flexbox는 요소들을 유연하게 정렬하고 배치하는 데 사용되는 기술입니다. flex-grow 속성은 Flexbox 컨테이너 내부의 아이템 요소에 적용되며, 요소가 가용 공간 내에서 어떤 비율로 늘어날 수 있는지를 지정합니다.
+
+        flex-grow 속성은 양수의 정수 값을 갖으며, 기본값은 0입니다. 이 속성을 사용하면 아이템 요소가 컨테이너의 가용 공간을 채우기 위해 얼마나 늘어날 수 있는지를 제어할 수 있습니다. flex-grow 값이 클수록 해당 요소는 다른 요소들보다 더 큰 공간을 차지하며, 남은 공간을 더 많이 확장합니다.
+
+        예를 들어, 아래의 CSS 코드는 Flexbox 컨테이너 내부의 두 아이템 요소에 flex-grow를 적용하는 방법을 보여줍니다:
+
+        .container {display: flex;}
+
+        .item {flex-grow: 1;}
+
+        위 코드에서 container는 Flexbox 컨테이너를 나타내는 클래스이고, item은 아이템 요소를 나타내는 클래스입니다. flex-grow 속성이 1로 설정되어 있으므로, 두 아이템 요소는 가용 공간을 동등하게 나누어 차지하게 됩니다. 만약 한 아이템 요소의 flex-grow 값을 2로 변경한다면, 그 아이템은 다른 아이템보다 두 배 더 많은 공간을 차지하게 될 것입니다.
+
+        flex-grow는 Flexbox의 다른 속성들과 함께 사용하여 레이아웃을 유연하게 조정하는 데에 유용합니다. 다른 속성으로는 flex-shrink (아이템 요소의 축소 비율 설정)와 flex-basis (아이템 요소의 초기 크기 설정) 등이 있습니다.*/
+        
+        .item{
+            height: 150px;
+            flex-basis: 100px; /* 각각의 아이템은 100px */
+        }
+        .layout{
+            width: 600px;
+            border: 1px solid red;
+        }
+
+        .flexbox{
+            display: flex;
+            background-color: #888;
+        }
+        .item:nth-of-type(1){ flex-grow: 1; }
+        .item:nth-of-type(2){ flex-grow: 1; }  
+        .item:nth-of-type(3){ flex-grow: 0; }
+        .item:nth-of-type(4){ flex-grow: 2; }
+        /* 늘어났을때 각각 남은 여백값을 설정해준다
+        각각 100px씩 4개 아이템이므로 총 400px 그리고 남은 여백은
+        200px이다 200px를 4개로 나눠주면 50px flex-grow의 1은 50px이다*/
+
+    </style>
+</head>
+    <body>
+        <div class="layout">
+            <div class="flexbox">
+                <div class="item" style="background-color: blue;">item1</div>
+                <div class="item" style="background-color: blueviolet;">item2</div>
+                <div class="item" style="background-color: aqua;">item3</div>
+                <div class="item" style="background-color: rgb(17, 229, 49);">item4</div>
+            </div>
+        </div>
+    </body>
+</html>
