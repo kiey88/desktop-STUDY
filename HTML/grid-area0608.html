@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css레이아웃-Grid</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 100px auto 100px;
+            height: 100vh;
+            grid-template-areas: 
+                "top top top" 
+                "left center right"
+                "bottom bottom bottom";
+            /* column-gap: 20px;
+            row-gap: 20px; */
+            gap: 20px; /* row, column */
+        }
+        header{
+            grid-area: top;
+        }
+        section{
+            grid-area: left;
+        }
+        aside{
+            grid-area: right;
+        }
+        article{
+            grid-area: center;
+        }
+        footer{
+            grid-area: bottom;
+        }
+        @media (max-width: 600px) {
+            main {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5,1fr);
+                grid-template-areas: 
+                "top"
+                "left"
+                "right"
+                "center"
+                "bottom";
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header style="background-color: orange;"></header>
+        <section style="background-color: yellowgreen;"></section>
+        <aside style="background-color: skyblue;"></aside>
+        <article style="background-color: purple;"></article>
+        <footer style="background-color: gray;"></footer>
+    </main>
+</body>
+</html>
+</html>
