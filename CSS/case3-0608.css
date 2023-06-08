@@ -1,0 +1,502 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+/* 바디의 마진값과 패딩값 0으로 설정*/
+body{ height: 100vh;}
+main{
+    width: 80%;
+    height: 600px;
+    margin: 50px auto; 
+    /* 가로 각각 50씩 세로는 오토 */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+     /* 8개의 그리드 레이아웃 생성 */
+    gap: 10px;
+     /* 그리드 레이아웃의 간격 생성 */
+}
+/* 카드1 */
+.card{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card > .img{
+    height: 55%;
+    background-image: url(../image/0608-1.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card > .detail{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card >.detail >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card >.detail >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card >.detail >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card >.detail >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card > .time{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+/* 카드2 */
+.card2{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card2 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card2 > .img2{
+    height: 55%;
+    background-image: url(../image/0608-2.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card2 > .detail2{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card2 >.detail2 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card2 >.detail2 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card2 >.detail2 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card2 >.detail2 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card2 > .time2{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 카드3 */
+.card3{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card3 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card3 > .img3{
+    height: 55%;
+    background-image: url(../image/0608-3.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card3 > .detail3{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card3 >.detail3 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card3 >.detail3 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card3 >.detail3 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card3 >.detail3 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card3 > .time3{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 카드4 */
+.card4{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card4 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card4 > .img4{
+    height: 55%;
+    background-image: url(../image/0608-4.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card4 > .detail4{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card4 >.detail4 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card4 >.detail4 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card4 >.detail4 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card4 >.detail4 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card4 > .time4{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+/* 카드5 */
+
+.card5{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card5 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card5 > .img5{
+    height: 55%;
+    background-image: url(../image/0608-5.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card5 > .detail5{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card5 >.detail5 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card5 >.detail5 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card5 >.detail5 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card5 >.detail5 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card5 > .time5{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 카드6 */
+
+.card6{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card6 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card6 > .img6{
+    height: 55%;
+    background-image: url(../image/0608-6.jpg);
+    background-size: cover;
+    background-position: -5px -50px;
+    margin-bottom: 5px;
+}
+.card6 > .detail6{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card6 >.detail6 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card6 >.detail6 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card6 >.detail6 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card6 >.detail6 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card6 > .time6{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 카드7 */
+
+.card7{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card7 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card7 > .img7{
+    height: 55%;
+    background-image: url(../image/0608-8.jpg);
+    background-size: cover;
+    background-position: -1px -40px;
+    margin-bottom: 5px;
+}
+.card7 > .detail7{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card7 >.detail7 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card7 >.detail7 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card7 >.detail7 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card7 >.detail7 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card7 > .time7{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* 카드8 */
+
+.card8{
+    padding: 10px;
+    border: 1px solid black;
+}
+    /* 그리드 레이아웃 8개의의 경계선 */
+.card8 > div{
+    border: 1px solid #888;
+    /* div 3개에 각각 회색경계선 생성*/
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card8 > .img8{
+    height: 55%;
+    background-image: url(../image/0608-7.jpg);
+    background-size: cover;
+    margin-bottom: 5px;
+}
+.card8 > .detail8{
+    height: 30%;
+    /*매혹적인 이미지에 높이 지정*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 6개의 그리드 레이아웃 생성*/
+    align-content: center;
+    gap: 5px;
+}
+.card8 >.detail8 >p:nth-of-type(1){
+    grid-column: 1 / span 2;
+    /* 매혹적인 이미지레이아웃을 우측으로 2개 레이아웃 병합*/
+    font-weight: bolder;
+}
+.card8 >.detail8 >p:nth-of-type(2){
+    text-align: right;
+    font-size: 80%;
+    align-self: self-end;
+}
+.card8 >.detail8 >p:nth-of-type(3){
+    grid-column:1 / span 3;
+    /* 10% 세일 레이아웃을 우측으로 3개 레이아웃 병합 */
+    font-weight: bolder;
+}
+.card8 >.detail8 >p.btn{
+    border:1px solid #00f;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    box-sizing: content-box;    
+}
+.card8 > .time8{
+    height: 15%;
+    display: flex;
+    /* 각각 플렉스로 설정해서 레이아웃을 한줄로 병합*/
+    justify-content: space-between;
+    align-content: center;
+}
