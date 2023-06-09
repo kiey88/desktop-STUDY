@@ -1,0 +1,212 @@
+@charset "utf-8";
+:root{
+    --main--color: #5D9AB2;
+    --main-padding: 20px;
+    --main-font-color: #222;
+}
+/* common class style */
+/* CSS 사용자 지정 속성 또는 CSS 변수를 정의. :root 선택자는 일반적으로 <html> 요소를 선택하는 데 사용 */
+
+
+
+.btnStyle{
+    background-color: #BF6F7A;
+    font-weight: bolder;
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* reset.css */
+*{margin: 0; padding: 0;}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+/* color: inherit;은 부모 요소로부터 색상 값을 상속받는 데 사용됩니다. 요소에 적용되면 부모 요소와 동일한 색상을 채택합니다. */
+ul{list-style: none;}
+/* <ul>은 HTML에서 순서 없는 목록을 나타내는 태그로, 기본적으로 항목 앞에 점이나 다른 기호로 표시됩니다. 그러나 위의 코드를 사용하면 목록 앞에 아무런 표시도 나타나지 않게 됩니다. */
+body{ 
+    height: 100vh;
+    font-family: 'Diphylleia', serif;
+}
+/* 
+대체 폰트: 기본 폰트가 사용자의 컴퓨터에 없을 경우 대체 폰트가 선택됩니다. 대체 폰트는 폰트 패밀리에 속하는 다른 폰트들 중에서 선택됩니다. */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+/* 폰트 불러오기 */
+
+header{
+    height: 80vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)) ,url(../image/fruits.jpg);
+    /* 백그라운드 이미지에 톤다운을 주고 싶을때 inear-gradient 사용해서 투명도 시작값과 끝값을 입력*/
+    background-size: cover;
+    background-position: center;
+    
+}
+nav{
+    background-color: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > .logo{
+    background-color: var(--main--color);
+    padding: var(--main-padding);
+    color: #fff;
+    font-size: 24px;
+}
+nav > ul{
+    display: flex;
+}
+nav > ul a{
+    display: block; 
+    /* a태그는 기본적으로 인라인속성이므로 탑과 바텀에 마진,패딩값이 설정이
+    안되므로 블록형으로 바꿔준다 그래야 패딩과 마진이 위아래에 설정된다*/
+    padding: var(--main-padding);
+    color: var(--main-font-color)
+}
+nav > ul a:hover{
+    background-color: gray;
+}
+div.title{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(90% - 80px); /* 백그라운드 이미지 귤의 높이 (header의 높이 90%)에서 메뉴높이정도를 빼준다 */
+    text-align: center;
+    
+}
+div.title > .container > img{
+    width: 25%;
+}
+
+div.title > .container > p:nth-of-type(1){
+    font-size: 10vh;
+    font-weight: bolder;
+    letter-spacing: 20px;
+}
+div.title > .container > p:nth-of-type(2){
+    font-size: 25px;
+    margin: 10px 0;
+}
+.secA{
+    display: flex;
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+    justify-content: center;
+}
+.secA > div{
+    margin: 30px;
+}
+/* 3개 카드각각에 마진 30씩 준다 */
+.secA > .card > .icon{
+    width: 100px;
+    margin: 0 auto;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #888;
+    color: #fff;
+}
+/*회색 동그라미부분 설정한다*/
+.secA > .card > .icon >span{
+    font-size: 60px;
+    line-height: 100px;
+}
+/*구글폰트에서 가져온 아이콘크기를 설정한다*/
+.secA > .card > p{
+    margin: 30px 0;
+}
+.secA > .card > a{
+    font-weight: bolder;
+    color: var(--main--color);
+}
+h3{
+    margin: 20px 0;
+}
+
+.wrap{
+    
+    margin: auto;
+    width: 80%;
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.wrap > img{
+    width: 50%
+}
+.wrap > div{
+    margin: 20px;
+    padding: 30px;
+}
+.wrap > div > h3{
+    font-size: 24px;
+}
+
+.wrap > div > p:nth-of-type(1){
+    font-size: 20px;
+    margin: 10px 0;
+}
+.secB{
+    color:#fff;
+    background-color: var(--main--color);
+}
+.secC{
+    padding: 50px;
+    
+}
+.secB .btnStyle , .secC .btnStyle{
+    margin: 50px 0;
+    text-align: center;
+}
+.secC .btnStyle{
+    border: 1px solid #222;
+}
+footer{
+    background-color: var(--main--color);
+    display: flex;
+    color: #fff;
+    justify-content: center;
+}
+footer > .F-logo{
+    width: 20%;
+}
+footer > .F-logo > p{
+    margin: 10px 0
+}
+footer > .F-logo > .F-icon > span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 30px;
+    margin: 3px;
+    font-size: 16px;
+}
+footer > .F-menu{
+    width: 40%;
+    display: flex;
+}
+/* about support contents 각각을 플렉스 속성부여해줌*/
+footer > .F-menu > div{
+    flex: 1;
+    margin: 0 20px;
+}
+/* flex: 1; 속성이 적용되면, .item들은 컨테이너 내에서 사용 가능한 모든 공간을 균일하게 차지하게 됩니다. 따라서 .item들은 동일한 너비를 가지며, 컨테이너의 크기가 변경될 때에도 유연하게 크기가 조정 */
+footer > .F-menu h3{
+    border-bottom: 2px solid #fff;
+}
+footer > .F-menu li{
+    padding: 10px 0;
+}
