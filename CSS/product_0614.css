@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+h1{
+    text-align: center;
+    
+}
+
+.prod-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.items{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden; 
+    /* 아이템즈 바깥에 보이는 것들은 안보이게 처리해준다 */
+    
+}
+
+.items > img{
+    width: 100%;
+}
+
+.items > .detail{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute ;
+    /* 기본적으로 width값과 height값은 승계가 되서 300씩이 되지만 포지션을 absolute로 설정하면 div의 기본 block설정이 inline-block으로 변경이 된다*/
+    /* 그렇기 때문에 width값과 height값을 별도로 300씩 설정을 해준다*/
+    top: 300px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 불투명도가 0이면 대상이 안보인다*/
+    transition: 0.5s;
+}
+.items:hover .detail{
+    opacity: 1; /* 불투명도가 1이면 대상이 보인다 */
+    top: 0;
+}
+/* 한칸띄면 하위요소 >은 부모자식 */
+/* h2{
+    width: 100%;
+    text-align: center;
+}
+p{
+    
+    width: 100%;
+    text-align: center;
+    
+} */

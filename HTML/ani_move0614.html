@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-animation</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+            display: inline-block;
+            width: 500px;
+            height: 500px;
+            background-color: beige;
+            position: relative;
+        }
+        .wrapper div{
+            width:30px;
+            height: 30px;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            top: 0;
+            left:0;
+
+        }
+        .wrapper div:nth-of-type(1){
+            background-color: blueviolet;
+        }
+        .wrapper div:nth-of-type(2){
+            background-color: yellowgreen;
+            animation-delay: 2.5s;
+        }
+        @keyframes move{
+            0%,100%{
+                top:0;
+                left:0;
+            }
+            25%{
+                top:0;
+                left:470px;
+            }
+            50%{
+                top:470px;
+                left:470px;
+            }
+            75%{
+                top:470px;
+                left:0;
+            }
+            100%{
+                top:0;
+                left:0;
+            }
+            /* 0%,100%{
+                top:0;
+                left:0;
+            }
+            25%{
+                top:0;
+                left:470px;
+            }
+            50%{
+                top:470px;
+                left:470px;
+            }
+            75%{
+                top:470px;
+                left:0;
+            } */
+            /*위의 퍼센트 설정과 아래의 퍼센트 설정은 동일하다
+            0%와 100%값이 동일할때 밑에 있는 100%를 위로 올려 0%와 동시에 써주게 되면 동일한 결과를 얻을수 있다*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+body{
+    perspective: 1000px;
+    /* 원근감을 설정 내눈과 모니터의 거리 */
+}
+div{
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border: 1px solid #000;
+    transition: 0.5s;
+    /* 변형되는 시간을 설정해준다 */
+}
+.box1:hover{
+    /* transform: translate(50px, 50px);
+    /* (위치이동 x값 y값지정)*/
+    /* transform: translateX(50px);
+    transform: translatey(50px); */ 
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+.box2:hover{
+
+    /* transform: scale(2);
+    /* 주는 값의 배만큼 커진다 */
+    /* transform: scale(0.5);
+    /* 1보다 작은 소수점을 입력하면 작아진다 */
+    transform: scalex(0.8);
+    /* transform: scaley(0.5); */
+}
+.box3:hover{
+    /* transform: rotate(180deg);
+    /* y축을 기준으로 180도 회전 */
+    /* transform: rotatex(-45deg); */
+    /* transform: rotatey(-45deg); */
+    transform: rotatez(30deg);
+}
+.box4:hover{
+    transform: skew(30deg, 20deg);
+    /* transform: skewx(20deg); */
+    /* transform: skewy(20deg); */
+}

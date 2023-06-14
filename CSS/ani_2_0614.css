@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    animation-name: shape;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    /* animation-direction은 animation-iteration-count를 2이상 써줄때 의미있다 animation-iteration-count가 1일때는 alternate와 alternate-reverse의 변화를 확인할수 없다*/
+}
+
+@keyframes shape{
+    0%{
+        border: 1px solid #000;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        border: 1px solid #f00;
+        border-radius: 50%;
+        background-color: red;
+    }
+    
+}
