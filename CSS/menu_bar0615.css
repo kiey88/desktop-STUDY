@@ -1,0 +1,220 @@
+@charset "utf-8";
+*{margin:0; padding: 0;}
+body{
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+.wrapper{
+    width:200px;
+    margin: 10px auto; 
+    
+}
+
+/* menu1 */
+.menu1 > .line{
+    height: 2px;
+    width: 0%;
+    background-color: tomato;
+    transition: 1s;
+}
+/* 두가지 연산자 지정방식을 비교해보아라 */
+.menu1:hover .line{
+    width: 100%;
+}
+/* .menu1>a:hover + .line{
+    width: 100%;
+} */
+
+
+/* menu2 */
+.menu2{
+    position: relative;
+}
+/* 상위요소에 릴레이티브로 기준점을 지정 */
+.menu2 > .line{
+    height: 2px;
+    width: 0%;
+    background-color: skyblue;
+    transition: 1s;
+    position: absolute;
+    right: 0; /*기준점을 오른쪽으로 지정 */
+}
+.menu2:hover .line{
+    width: 100%;
+}
+
+/* menu3 */
+.menu3{
+    position: relative;
+}
+.menu3 > .line{
+    height: 10px;
+    width: 10px;
+    background-color: blueviolet;
+    position: absolute;
+    /* left: 0; */
+    right: 0;
+}
+.menu3:hover .line{
+    
+    /* left: 100%; */
+    right: 100%;
+}
+
+
+/* menu4 */
+.menu4{
+    position:relative;
+}
+.menu4 > .line{
+    height: 10px;
+    width: 0;
+    background-color: blueviolet;
+    position: absolute;
+    /* left: 0; */
+    left: 50%;
+    transition: 1s;
+}
+.menu4:hover .line{
+    left:0;
+    width: 100%;
+    
+}
+
+/* menu5 */
+.menu5{
+    position:relative;
+}
+.menu5 > .line{
+    height: 10px;
+    width: 100%;
+    background-color: blueviolet;
+    position: absolute;
+    /* left: 0; */
+    left: 0%;
+    transition: 1s;
+}
+.menu5:hover .line{
+    left:50%;
+    width: 0;
+}
+
+/* menu6 */
+/* menu6 앞뒤로 각각 가상선택자로 가상의 span을 생성해준다 */
+.menu6:after{
+    content: ">>";
+}
+.menu6::before{
+    content: "<<";
+}
+/* menu7 */
+.menu7:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+/* menu8 */
+.menu8{
+    position:relative;
+    margin: 4px;
+}
+.menu8:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: 1s;
+    position: absolute;
+    right: 0;
+
+}
+.menu8:hover:after{
+    width: 100%;
+    }
+
+
+/* menu9 */
+.menu9{
+    width: 100%;
+    height: 50px;
+    position:relative;
+    overflow: hidden;
+
+}
+
+.menu9:before{
+    content: "menu-9";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+}
+.menu9:hover:before{
+    top: -100%;
+}
+.menu9:hover:after{
+    top: 0%;
+}
+.menu9:after{
+    content: "menu-9";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    transition: 1s;
+    position: absolute;
+    top: 100%;
+}
+
+
+/* menu9 */
+.menu10{
+    width: 100%;
+    height: 50px;
+    position:relative;
+    overflow: hidden;
+
+}
+
+.menu10:before{
+    /* content: "menu-9"; */
+    content:attr(menu-title);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+}
+.menu10:hover:before{
+    top: -100%;
+}
+.menu10:hover:after{
+    top: 0%;
+}
+.menu10:after{
+    /* content: "menu-9"; */
+    content:attr(menu-title);
+    /* attr(menu-10)"은 CSS 속성 선택자에 대한 참조로 보입니다. CSS에서 attr() 함수는 요소에서 지정된 속성의 값을 가져오는 데 사용됩니다. "menu-10" 부분은 "menu-10"이라는 속성을 가리키고 있다는 것을 나타냅니다. */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    transition: 1s;
+    position: absolute;
+    top: 100%;
+}

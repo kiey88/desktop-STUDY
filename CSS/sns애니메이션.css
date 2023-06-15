@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* reset */
+*{margin: 0; padding:0}
+a{ text-decoration: none; color: inherit;}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sns > a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    /* 하이트와 라인하이트 동일하게 해주면 세로로 중앙정렬된다*/
+    font-size:30px;
+    border: 1px solid #222;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: rgb(12, 13, 13);
+    
+}
+.sns a::before{
+    display: block;
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;;
+}
+.sns > a > i{
+    position: relative;
+    
+}
+.sns > a:hover i{
+    color: #fff;
+    transform:rotate(20deg)
+
+}
+.sns > a:hover::before{
+    width: 100%;
+}
+.sns  a:nth-of-type(1)::before{
+    background-color: tomato;}
+.sns  a:nth-of-type(2)::before{
+    background-color: red;}
+.sns  a:nth-of-type(3)::before{
+    background-color: yellowgreen;}
+    

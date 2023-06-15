@@ -1,0 +1,59 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 500px;
+    padding: 30px;
+    background-color: rgb(81, 79, 79);
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 20px;
+    line-height: 2rem;
+}
+.wrapper > h1{
+    text-align: center;
+}
+.item > .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.item > .line{
+    border: 1px solid yellowgreen;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.item > .line > .progress{
+    height: 10px;
+    width: 100%;
+    background-color: yellow;
+    animation-name: skill-progress;
+    animation-duration: 1s;
+}
+
+.item:nth-of-type(1) > .line > .progress{
+    width: 90%;
+}
+.item:nth-of-type(2) > .line > .progress{
+    width: 80%;
+}
+.item:nth-of-type(3) > .line > .progress{
+    width: 65%;
+}
+.item:nth-of-type(4) > .line > .progress{
+    width: 70%;
+}
+.item:nth-of-type(5) > .line > .progress{
+    width: 82%;
+}
+
+@keyframes skill-progress{
+    0%{width: 0;}
+}

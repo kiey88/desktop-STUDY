@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+*{margin:0;  padding:0; }
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: yellowgreen;
+    /* 중앙정렬처리할수 있는 케이스1 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    /* 중앙정렬처리할수 있는 케이스2 */
+    /* position: relative; */
+
+    /* 중앙정렬처리할수있는 케이스3 */
+    position: relative;
+}
+.item{
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    
+    /* 중앙정렬 처리할수 있는 케이스2 */
+    /* 콘테이너 클래스에 포지션 릴레이티브를 설정후 아이템클래스에 포지션앱솔루트한후에 탑 바텀 레프트 라이트를 기준값을 각각 모두 0처리후에 마진값을 오토로 하면 중앙정렬처리가 된다 */
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* 두개를 각각적용해봤을때 형태를 비교해보자 */
+    /* margin: auto; */
+    /* margin: 0 auto; */
+    
+    /* 중앙정렬 처리할 수있는 케이스3 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 트랜스폼은 이동시킬 대상을 기준으로 입력값을 기입 item의 크기의 가로세로 각각 이동한다 */
+}
