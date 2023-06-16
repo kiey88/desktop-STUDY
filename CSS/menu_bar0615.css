@@ -7,11 +7,13 @@ a{
     text-decoration: none;
     font-size: 30px;
     color: #222;
-    display: block;
+    display: block; 
+    /* a태그는 기본적으로 inline속성을 가지고 있기 때문에 글자사이즈    154.91*40 만큼만 콘텐츠사이즈를 가진다 디스플레이형식을 block으로 바꿔주면 200 *40으로 콘텐츠사이즈가 설정된다*/
     text-align: center;
 }
 .wrapper{
     width:200px;
+/*200으로 설정해주면 하위태그에게도 설정을 물려준다*/
     margin: 10px auto; 
     
 }
@@ -20,17 +22,20 @@ a{
 .menu1 > .line{
     height: 2px;
     width: 0%;
+/*<div class="line"></div>의 기본width값은 상위인 .wrapper의 값dmf 물려받아 200이 된다*/
     background-color: tomato;
     transition: 1s;
 }
+/* <div class="menu1"> 의 콘텐츠 사이즈는 200*42를 가진다*/
+
 /* 두가지 연산자 지정방식을 비교해보아라 */
-.menu1:hover .line{
-    width: 100%;
-}
-/* .menu1>a:hover + .line{
+/* .menu1:hover .line{
     width: 100%;
 } */
-
+.menu1>a:hover + .line{
+    width: 100%;
+}
+/*인접형제선택자를 통해 a태그의 첫번째 형제태그인 line class하나만 선택이 된다*/
 
 /* menu2 */
 .menu2{
@@ -79,10 +84,10 @@ a{
     position: absolute;
     /* left: 0; */
     left: 50%;
-    transition: 1s;
+    transition: 2s;
 }
 .menu4:hover .line{
-    left:0;
+    left:0%;
     width: 100%;
     
 }
@@ -107,14 +112,14 @@ a{
 
 /* menu6 */
 /* menu6 앞뒤로 각각 가상선택자로 가상의 span을 생성해준다 */
-.menu6:after{
+.menu6::after{
     content: ">>";
 }
 .menu6::before{
     content: "<<";
 }
 /* menu7 */
-.menu7:after{
+.menu7::after{
     content: "";
     display: block;
     width: 100%;
@@ -127,7 +132,7 @@ a{
     position:relative;
     margin: 4px;
 }
-.menu8:after{
+.menu8::after{
     content: "";
     display: block;
     width: 0;
@@ -138,7 +143,7 @@ a{
     right: 0;
 
 }
-.menu8:hover:after{
+.menu8:hover::after{
     width: 100%;
     }
 
@@ -152,7 +157,7 @@ a{
 
 }
 
-.menu9:before{
+.menu9::before{
     content: "menu-9";
     display: block;
     width: 100%;
@@ -162,13 +167,13 @@ a{
     position: absolute;
     top: 0;
 }
-.menu9:hover:before{
+.menu9:hover::before{
     top: -100%;
 }
-.menu9:hover:after{
+.menu9:hover::after{
     top: 0%;
 }
-.menu9:after{
+.menu9::after{
     content: "menu-9";
     display: block;
     width: 100%;
@@ -180,7 +185,7 @@ a{
 }
 
 
-/* menu9 */
+/* menu10 */
 .menu10{
     width: 100%;
     height: 50px;
@@ -189,7 +194,7 @@ a{
 
 }
 
-.menu10:before{
+.menu10::before{
     /* content: "menu-9"; */
     content:attr(menu-title);
     display: block;
@@ -200,16 +205,16 @@ a{
     position: absolute;
     top: 0;
 }
-.menu10:hover:before{
+.menu10:hover::before{
     top: -100%;
 }
-.menu10:hover:after{
+.menu10:hover::after{
     top: 0%;
 }
-.menu10:after{
+.menu10::after{
     /* content: "menu-9"; */
     content:attr(menu-title);
-    /* attr(menu-10)"은 CSS 속성 선택자에 대한 참조로 보입니다. CSS에서 attr() 함수는 요소에서 지정된 속성의 값을 가져오는 데 사용됩니다. "menu-10" 부분은 "menu-10"이라는 속성을 가리키고 있다는 것을 나타냅니다. */
+    /* attr(menu-title)"은 CSS 속성 선택자에 대한 참조로 보입니다. CSS에서 attr() 함수는 요소에서 지정된 속성의 값을 가져오는 데 사용됩니다. "menu-title" 부분은 "menu-10"이라는 속성을 가리키고 있다는 것을 나타냅니다. */
     display: block;
     width: 100%;
     height: 100%;
