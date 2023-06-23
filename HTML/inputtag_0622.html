@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표구성</title>
+    <style>
+        table, td, th{
+            border-collapse: collapse;
+            border: 1px solid gray;
+        }
+        /* tr > td:first-child{
+            background-color: green;
+        } */
+    </style>
+</head>
+<body>
+    <table>
+        <caption>표제목</caption>
+        <colgroup>
+            <col style="background-color: #222;">
+            <col span="2" style="background-color: #777;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+                <th>제목3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1-1</td>
+                <td>1-2</td>
+                <td>1-3</td>
+            </tr>
+            <tr>
+                <td>2-1</td>
+                <td>2-2</td>
+                <td>2-3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총합1</td>
+                <td>총합2</td>
+                <td>총합3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

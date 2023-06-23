@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/*** reset.css ***/
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none; color: inherit;}
+li{ list-style: none;}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+}
+header{
+    height: 100px;
+    display: flex;    
+}
+header > .logo{
+    width: 20%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: sienna;
+}
+header > nav{
+    width: 80%;
+    height: 100%;
+}
+nav > ul{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 80px;
+    margin-right: 50px;
+}
+.slide{
+    height: 300px;
+    background-image: url(./images/slide01.png);
+}
+.slide > p{
+    background-color: pink;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.info{
+    height: 200px;
+    display: flex;
+}
+.info > div{
+    width: 33.333333%;
+    height: 100%;
+}
+
+.info > .tabs > ul > li{
+    display: inline-block;
+    padding: 10px;
+}
+.info > .tabs > ul > li.on{
+    background-color: violet;
+}
+.info > .tabs > .tab-item{
+    background-color: violet;
+    padding: 29px 10px;
+}
+.info > .tabs > .tab-item span{
+    display: inline-block;
+}
+.info > .tabs > .tab-item span:nth-of-type(1){
+    width: 70%;
+    white-space: nowrap;
+    /* white-space: nowrap;는 한글로 "공백 처리: 자동 줄바꿈 금지"라고 표현할 수 있습니다. 이 CSS 속성은 요소 내의 내용에서 줄 바꿈을 방지하는 역할을 합니다. 해당 속성이 요소에 적용되면 텍스트나 인라인 요소들이 한 줄에 표시되며 줄 바꿈 없이 계속해서 표시됩니다. */
+    overflow: hidden;
+    /* overflow: hidden;은 한글로 "넘침 처리: 숨김"이라고 표현할 수 있습니다. 이 CSS 속성은 요소의 내용이 너무 커서 요소의 경계를 넘어갈 때, 해당 내용을 숨기고 요소의 영역 내에서만 보이도록 처리하는 역할을 합니다. */
+    text-overflow: ellipsis;
+    /* text-overflow: ellipsis;는 한글로 "텍스트 넘침 처리: 생략 부호"라고 표현할 수 있습니다. 이 CSS 속성은 요소 내의 텍스트가 요소의 영역을 넘어갈 때, 생략 부호(...)를 사용하여 텍스트를 줄여서 표시하는 역할을 합니다. */
+
+}
+.info > .banner{
+    background-image: url(./images/banner.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info > .banner > p,
+.info > .link > p{
+    background-color: #fff;
+    padding: 10px;
+}
+.info > .link{
+    background-image: url(./images/link.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+}
+footer > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > .f-logo{
+    width: 20%;
+    font-size: 30px;
+    font-weight: bolder;    
+    color: #555;
+}
+footer > .f-text{
+    width: 60%;
+}
+footer > .sns{
+    width: 20%;
+}
+footer > .sns > i{
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
