@@ -1,0 +1,94 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    /* visibility: hidden; */
+    display: none;
+}
+
+.slide{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.slide > img:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 1s;
+}
+.slide > img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    top: 0;
+    left: 100%;
+    opacity: 1;
+    transition: 1s;
+}
+.slide > img:nth-of-type(3){
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+    top: 0;
+    left: 200%;
+    opacity: 1;
+    transition: 1s;
+}
+.btn{
+    text-align: center;
+    padding: 10px;
+}
+.btn > label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+
+}
+input[id=tab1]:checked ~ .slide{
+    opacity: 1;
+    left: 0;
+}
+
+input[id=tab2]:checked ~ .slide{
+    opacity: 1;
+    right: 100%;
+}
+input[id=tab3]:checked ~ .slide{
+    opacity: 1;
+    right: 200%;
+}
+
+input[id=tab1]:checked ~ .slide > img:nth-child(1){
+    opacity: 1;
+}
+input[id=tab1]:checked ~ .slide > img:nth-child(2){
+    opacity: 0;
+}
+input[id=tab1]:checked ~ .slide > img:nth-child(3){
+    opacity: 0;
+}
+input[id=tab2]:checked ~ .slide > img:nth-child(1){
+    opacity: 0;
+}
+input[id=tab2]:checked ~ .slide > img:nth-child(2){
+    opacity: 1;
+}
+input[id=tab2]:checked ~ .slide > img:nth-child(3){
+    opacity: 0;
+}
+input[id=tab1]:checked ~ .btn>label[for=tab1],
+input[id=tab2]:checked ~ .btn>label[for=tab2],
+input[id=tab3]:checked ~ .btn>label[for=tab3]{
+    background-color: tomato;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css이용한 form작성</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrapper{
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .wrapper > div{
+            text-align: center;
+        }
+        .check > input:checked + label{
+            color: tomato;
+        }
+        .grade > label > input:checked + span{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="check">
+            <input type="checkbox" name="check" id="check-ok">
+            <label for="check-ok">약관을 충분히 이해하였으면 동의 합니다</label>
+        </div>
+        <hr>
+        <div class="grade">
+            <!-- 체크되면 색깔이 변경되게 하려고 텍스트를 인접연산자로 지정하기 위해 인풋 아래에 스판으로 감쌌다  -->
+            <label>
+                <input type="radio" name="grade_name">
+                <span>초등학생</span>
+            </label>
+            <label>
+                <input type="radio" name="grade_name">
+                <span>중학생</span>
+            </label>
+            <label>
+                <input type="radio" name="grade_name">
+                <span>고등학생</span>
+            </label>
+            <label>
+                <input type="radio" name="grade_name">
+                <span>대학생</span>
+            </label>
+        </div>
+    </div>
+</body>
+</html>

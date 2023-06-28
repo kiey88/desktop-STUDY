@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원 가입을 환영합니다</h1>
+    <form action="" method="get">
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li><label for="id">아이디</label>
+                    <input type="text" name="id" id="id">
+                </li>
+                <li><label for="email">이메일</label>
+                    <input type="email" name="email" id="email">
+                </li>
+                <li><label for="pw">비밀번호</label>
+                    <input type="password" name="pw" id="pw">
+                </li>
+                <li><label for="pw">비밀번호확인</label>
+                    <input type="password" name="pw" id="pw">
+                </li>
+            </ul>
+        </fieldset>
+        <!-- 라디오 네임을 동일하게 하면 둘중하나만 선택 가능해진다 -->
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input id="event-on"type="radio" name="event">
+            <label for="receive">메일 수신</label>
+            <input id="event-off" type="radio" name="event">
+            <label for="not">메일 수신 안함</label>
+        </fieldset>
+        <div id="btn">
+            <button type="submit">가입하기</button>
+            <button type="reset">취소</button>
+        </div>
+    </form>
+</body>
+</html>
