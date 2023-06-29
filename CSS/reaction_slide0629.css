@@ -1,0 +1,79 @@
+@charset "utf-8";
+input[name=tab]{
+    display: none;
+}
+.btn{
+    display: none;
+    text-align: center;
+    margin: 20px auto;
+}
+.btn > label{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background-color: #ccc;
+    cursor:pointer;
+}
+input[id=tab1]:checked ~ .btn > label[for=tab1],
+input[id=tab2]:checked ~ .btn > label[for=tab2],
+input[id=tab3]:checked ~ .btn > label[for=tab3]{
+    background-color: tomato;
+}
+.view{
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabs{
+    width: 100%; /*포지션을 absolute로 주면 tabs의 속성이inline block으로 변경이 되서 위드값을 100%로 해야 상위의 width값을 상속받을수 있고 가운데 정렬을 할 수 있다*/
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.tabs > .item{
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+}
+.tabs > .item > p:nth-child(1){
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width:1024px){
+    .btn{
+        display: block;
+
+    }
+    .view{
+        width: 300px;
+        background-color: aqua;
+
+    }
+    .tabs{
+        width: 300%;
+    }
+    input[id=tab1]:checked ~ .view > .tabs{
+        left: 0;
+    }
+    input[id=tab2]:checked ~ .view > .tabs{
+        left: -100%;
+    }
+    input[id=tab3]:checked ~ .view > .tabs{
+        left: -200%;
+    }
+}
