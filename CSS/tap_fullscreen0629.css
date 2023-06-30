@@ -56,6 +56,15 @@ input[id=tab3]:checked ~ .tabs > .items{
     height: 5px;
     background-color: #fff;
     display: inline-block;
+/* CSS에서 label 요소의 기본 속성은 display: inline입니다. 이는 label 요소가 인라인 요소로 동작하여 다른 요소들과 같은 줄에 표시되도록 합니다.
+
+인라인 요소는 해당 요소의 내용 크기만큼만 공간을 차지하므로, label 요소를 인라인 요소로 유지하면 텍스트 내용만 표시되고 별도의 공간을 차지하지 않습니다. 따라서 label 요소의 내용은 보이지만, 요소 자체는 보이지 않게 됩니다.
+
+그러나 label 요소에 display: inline-block 속성을 지정하면 label 요소가 인라인 레벨 박스가 아닌 인라인-블록 레벨 박스로 동작하게 됩니다. 이는 label 요소가 내용 크기에 맞게 공간을 차지하며, 다른 요소들과 같은 줄에 표시되는 동시에 블록 요소처럼 너비와 높이를 지정할 수 있게 됩니다.
+
+만약 label 요소에 display: inline-block 속성을 적용하면서 내용이 없는 경우, label 요소는 너비와 높이를 가지지만 내용이 없으므로 아무 것도 보이지 않게 됩니다. 이는 display: inline-block 속성이 적용되어도 label 요소에 실제로 내용이 없다면 빈 공간이 표시되지 않기 때문입니다.
+
+따라서 label 요소를 보이게 하기 위해서는 display: inline-block 속성을 적용하는 동시에 내용을 포함시켜야 합니다. 예를 들어, 텍스트 내용이 있는 label 요소에 display: inline-block을 적용하면 요소와 내용이 모두 보이게 됩니다. */
 }
 input[id=tab1]:checked ~ .btn > label[for=tab1],
 input[id=tab2]:checked ~ .btn > label[for=tab2],
