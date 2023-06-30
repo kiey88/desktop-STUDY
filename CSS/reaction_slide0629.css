@@ -28,7 +28,9 @@ input[id=tab3]:checked ~ .btn > label[for=tab3]{
 }
 
 .tabs{
-    width: 100%; /*포지션을 absolute로 주면 tabs의 속성이inline block으로 변경이 되서 위드값을 100%로 해야 상위의 width값을 상속받을수 있고 가운데 정렬을 할 수 있다*/
+    width: 100%; /*포지션을 absolute로 주면 tabs의 속성이inline block으로
+    변경이 되서 위드값을 100%로 해야 상위의 width값을 상속받을수 있고 가운데
+    정렬을 할 수 있다*/
     display: flex;
     justify-content: center;
     position: absolute;
