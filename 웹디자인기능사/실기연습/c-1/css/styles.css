@@ -1,0 +1,74 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+a{text-decoration: none; display: block; color: inherit;}
+li{list-style: none;}
+.wrapper{
+    width: 1000px;
+    height: 650px;
+    margin: 0 0;
+    display: flex;
+}
+header{
+    width: 200px;
+    
+}
+header > h1{
+    height: 40px;
+    
+}
+nav{
+    width: 200px;
+    height: 610px;
+    background-color: red;
+}
+main{
+    width: 800px;
+}
+section.slide{
+    
+    height: 350px;
+    background-color: aqua;
+}
+section.contents{
+    display: flex;
+    height: 200px;
+}
+.contents > article{
+    width: 33.333333%;
+}
+.tabs{
+    width: 266.666666px;
+    
+    background-color: brown;
+}
+.banner{
+    width: 266.666666px;
+    text-align: center;
+    background-image: url(../images/banner.png);
+}
+.links{
+    width: 266.666666px;
+    text-align: center;
+    background-image: url(../images/link.png);
+}
+footer{
+    display: flex;
+    height: 100px;
+    
+}
+footer > .f-logo{
+    width: 200px;
+    height: 100px;
+    background-image: url(../images/f-logo.png);
+}
+footer > .f-item{
+    width: 600px;
+    
+}
+.f-item >div{
+    height: 50%;
+    background-color: chartreuse;
+}
+ul{
+    display: flex;
+}
