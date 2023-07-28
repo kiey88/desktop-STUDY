@@ -1,0 +1,79 @@
+from tkinter import *
+from functools import partial
+
+win = Tk() 
+win.geometry("510x250")
+
+display = StringVar()
+
+park = []
+for i in range(0, 8):
+    park.append(StringVar())
+    
+def carNum(num):
+    if num == "IN" :
+        s = display.get()
+        display.set("")
+        for i in range(0, 8):
+            if park[i].get() == "" :
+                park[i].set(s)
+                return
+    if num == "OUT" :
+        s = display.get()
+        display.set("")
+        for i in range(0, 8):
+            if park[i].get() == s :
+                park[i].set("")
+                return
+            
+    if int(num)>=0 and int(num)<= 9 :
+        display.set(display.get() + num)
+    
+
+
+# 주차 상태 - 왼쪽
+lblCarState = Label(win, relief="ridge", text = "주차상태").place(x=10, y=10, height=40, width=305)
+
+lblCarNo = []
+lblCarNumber = []
+    
+for i in range(0,8) :
+    lblCarNo.append(Label(win, relief="ridge", bg='light blue', text = str(i+1)))
+    lblCarNumber.append(Label(win, relief="ridge", text="", textvariable=park[i] ))
+    
+lblCarNo[0].place(x=10, y=60, width=40, height=40) 
+lblCarNo[1].place(x=10, y=105, width=40, height=40) 
+lblCarNo[2].place(x=10, y=150, width=40, height=40) 
+lblCarNo[3].place(x=10, y=195, width=40, height=40) 
+lblCarNo[4].place(x=170, y=60, width=40, height=40) 
+lblCarNo[5].place(x=170, y=105, width=40, height=40) 
+lblCarNo[6].place(x=170, y=150, width=40, height=40) 
+lblCarNo[7].place(x=170, y=195, width=40, height=40) 
+              
+lblCarNumber[0].place(x=55, y=60, width=100, height=40)
+lblCarNumber[1].place(x=55, y=105, width=100, height=40) 
+lblCarNumber[2].place(x=55, y=150, width=100, height=40) 
+lblCarNumber[3].place(x=55, y=195, width=100, height=40) 
+lblCarNumber[4].place(x=215, y=60, width=100, height=40) 
+lblCarNumber[5].place(x=215, y=105, width=100, height=40) 
+lblCarNumber[6].place(x=215, y=150, width=100, height=40) 
+lblCarNumber[7].place(x=215, y=195, width=100, height=40) 
+
+# 주차 번호 입출력 - 오른쪽
+lblDisplay = Label(win, relief="ridge", text = "", textvariable=display)
+lblDisplay.place(x=350, y=10, height=40, width=140)
+
+xy = [["1", 350, 60, 40, 40], ["2", 400, 60, 40, 40], ["3", 450, 60, 40, 40], 
+      ["4", 350, 105, 40, 40], ["5", 400, 105, 40, 40], ["6", 450, 105, 40, 40],
+      ["7", 350, 150, 40, 40], ["8", 400, 150, 40, 40], ["9", 450, 150, 40, 40], 
+      ["IN", 350, 195, 40, 40], ["0", 400, 195, 40, 40], ["OUT", 450, 195, 40, 40]]
+btnNo = []
+
+for i in range(len(xy)) :
+    btnNo.append(Button(win, text=xy[i][0], command=partial(carNum, xy[i][0])))
+    btnNo[i].place(x=xy[i][1], y=xy[i][2], height=xy[i][3], width=xy[i][4])
+    
+btnNo[9].config(bg='light blue')
+btnNo[11].config(bg='light blue')
+
+win.mainloop()

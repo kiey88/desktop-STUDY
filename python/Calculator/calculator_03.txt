@@ -1,0 +1,55 @@
+from tkinter import *
+from functools import partial
+
+win = Tk() 
+win.geometry("275x415")
+
+display = StringVar()
+
+xy = [["1", 10, 80, 60, 60], 
+      ["2", 75, 80, 60, 60], 
+      ["3", 140, 80, 60, 60], 
+      ["+", 205, 80, 60, 60],
+      ["4", 10, 145, 60, 60], ["5", 75, 145, 60, 60], ["6", 140, 145, 60, 60], ["-", 205, 145, 60, 60],
+      ["7", 10, 210, 60, 60], ["8", 75, 210, 60, 60], ["9", 140, 210, 60, 60], ["*", 205, 210, 60, 60],
+      [".", 10, 275, 60, 60], ["0", 75, 275, 60, 125], ["", 0, 0, 0, 0], ["/", 205, 275, 60, 60],
+      ["C", 10, 340, 60, 60], ["del", 75, 340, 60, 60], ["=", 140, 340, 60, 125], ["", 0, 0, 0, 0]]
+
+btn=[]
+
+def op(data) :   
+    
+    if data == "C" :
+        display.set("")
+        return
+    if data == "del" :
+        display.set(display.get()[:-1])
+        return
+    if data == "=" :
+        display.set(eval(display.get())) 
+        return
+
+    if data == "+" or data == "-" or data == "*" or data == "/" or data == "." or data == "0":
+        if display.get() == "" :
+            return
+
+    
+    keyA = 0
+    keyB = 0    
+    display.set(display.get() + data)
+    if len(display.get()) >= 3 :
+        if display.get()[-2] == "+" or display.get()[-2] == "-" or display.get()[-2] == "*" or display.get()[-2] == "/" :
+            keyA = 1
+        if display.get()[-1] == "+" or display.get()[-1] == "-" or display.get()[-1] == "*" or display.get()[-1] == "/" :
+            keyB = 1
+        if keyA == 1 and keyB == 1 : 
+            display.set(display.get()[:-2])
+            display.set(display.get() + data)
+            
+txtDisplay = Label(win, text="0", relief="ridge", anchor="e", textvariable=display)
+txtDisplay.place(x=10, y=10, height=60, width=255)
+for i in range(len(xy)) :
+    btn.append(Button(win, text=xy[i][0], font=("", "12", ""),command=partial(op, xy[i][0])
+                   ).place(x=xy[i][1], y=xy[i][2], height=xy[i][3], width=xy[i][4]))
+    
+win.mainloop()

@@ -1,0 +1,61 @@
+from tkinter import *
+import random
+
+win = Tk() 
+win.geometry("275x415")
+
+display = StringVar()
+
+def op01():
+    s = display.get()
+    s = s + "1"
+    display.set(s)
+def op02(): s = display.get(); s = s + "2"; display.set(s)
+def op03(): s = display.get(); s = s + "3"; display.set(s)
+def op04(): s = display.get(); s = s + "+"; display.set(s)
+def op05(): s = display.get(); s = s + "4"; display.set(s)
+def op06(): s = display.get(); s = s + "5"; display.set(s)
+def op07(): s = display.get(); s = s + "6"; display.set(s)
+def op08(): s = display.get(); s = s + "-"; display.set(s)
+def op09(): s = display.get(); s = s + "7"; display.set(s)
+def op10(): s = display.get(); s = s + "8"; display.set(s)
+def op11(): s = display.get(); s = s + "9"; display.set(s)
+def op12(): s = display.get(); s = s + "*"; display.set(s)
+def op13(): s = display.get(); s = s + "."; display.set(s)
+def op14(): s = display.get(); s = s + "0"; display.set(s)
+def op15(): s = display.get(); s = s + "/"; display.set(s)
+    
+def op16(): display.set("")
+def op17(): 
+    s = display.get()
+    st = s[:-1]
+    display.set(st)
+def op18():
+    res = eval(display.get())
+    display.set(res)   
+
+
+txtDisplay = Label(win, text="0", relief="ridge", anchor="e", textvariable=display)
+txtDisplay.place(x=10, y=10, height=60, width=255)
+
+btn01 = Button(win, text="1", command=op01)
+btn01.place(x=10, y=80, height=60, width=60)
+btn02 = Button(win, text="2", command=op02).place(x=75, y=80, height=60, width=60)
+btn03 = Button(win, text="3", command=op03).place(x=140, y=80, height=60, width=60)
+btn04 = Button(win, text="+", command=op04).place(x=205, y=80, height=60, width=60)
+btn05 = Button(win, text="4", command=op05).place(x=10, y=145, height=60, width=60)
+btn06 = Button(win, text="5", command=op06).place(x=75, y=145, height=60, width=60)
+btn07 = Button(win, text="6", command=op07).place(x=140, y=145, height=60, width=60)
+btn08 = Button(win, text="-", command=op08).place(x=205, y=145, height=60, width=60)
+btn09 = Button(win, text="7", command=op09).place(x=10, y=210, height=60, width=60)
+btn10 = Button(win, text="8", command=op10).place(x=75, y=210, height=60, width=60)
+btn11 = Button(win, text="9", command=op11).place(x=140, y=210, height=60, width=60)
+btn12 = Button(win, text="*", command=op12).place(x=205, y=210, height=60, width=60)
+btn13 = Button(win, text=".", command=op13).place(x=10, y=275, height=60, width=60)
+btn14 = Button(win, text="0", command=op14).place(x=75, y=275, height=60, width=125)
+btn15 = Button(win, text="/", command=op15).place(x=205, y=275, height=60, width=60)
+btn16 = Button(win, text="C", command=op16).place(x=10, y=340, height=60, width=60)
+btn17 = Button(win, text="del", command=op17).place(x=75, y=340, height=60, width=60)
+btn18 = Button(win, text="=", command=op18).place(x=140, y=340, height=60, width=125)
+
+win.mainloop()

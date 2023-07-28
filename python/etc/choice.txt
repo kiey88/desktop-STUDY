@@ -1,0 +1,22 @@
+from tkinter import *
+import random
+
+win = Tk()
+win.geometry("400x530")
+
+animal = [PhotoImage(file="Monkey.png"),
+          PhotoImage(file="Tigger.png"),
+          PhotoImage(file="Lion.png"),
+          PhotoImage(file="Rabbit.png")]
+
+def select() :
+    no = random.randint(0, len(animal)-1)
+    lblA.config(image=animal[no])
+
+lblA = Label(win, relief="ridge", bg="#F5FFFA")
+lblA.place(x=20, y=20, height=360, width=360)
+
+btnSelect = Button(win, text="무엇이 나올까?", font=("", "30", ""), command=select)
+btnSelect.place(x=20, y=400, height=100, width=360)
+
+win.mainloop()

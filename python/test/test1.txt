@@ -1,0 +1,23 @@
+from tkinter import *
+
+win = Tk() 
+win.geometry("510x250")
+
+def displayNumber(number) :
+    s = display.get()
+    s = s + number
+    display.set(s)          
+
+lblDisplay = Label(win, relief="ridge", text = "", textvariable=display)
+lblDisplay.place(x=10, y=10, height=100, width=320)
+
+btn1 = Button(win, text="1", command=displayNumber("1"))
+btn1.place(x = 10, y = 120, width=100, height=100)
+
+btn2 = Button(win, text="2", command=displayNumber("2"))
+btn2.place(x = 120, y = 120, width=100, height=100)
+
+btn3 = Button(win, text="3", command=displayNumber("3"))
+btn3.place(x = 230, y = 120, width=100, height=100)
+
+win.mainloop()
