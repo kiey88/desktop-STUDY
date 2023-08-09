@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM구조</title>
+</head>
+<body>
+    <h1>두 수를 더하세요</h1>
+    <input type="number" value="4" id="number">
+    <span>+</span>
+    <input type="number" class="number2">
+    <span>=</span>
+    <span>계산값</span>
+    <br>
+    <button>계산하기</button>
+    <script>
+        // //자바스크립트 소스
+        // //1.요소정보 가져오기
+        // const elemInput1 = document.getElementById("number");
+        // //value값 알아내기
+        // console.log(elemInput1.value);
+        // //class를 이용하는 방법
+        // //1.요소정보 가져오기
+        // //배열로 가져오기
+        // const elemInput2 = document.getElementsByClassName("number2");
+        // console.log(elemInput2[0].value);
+
+        //1.요소 선택하기 (선택자)
+        const elemInput1 = document.querySelector('#number');
+        console.log(elemInput1);
+        const elemInput2 = document.querySelector('.number2');
+        console.log(elemInput2);
+        // 배열로 가져오기
+        const elemspan =  document.querySelectorAll('span');
+        // console.log(elemspan);
+        for(let i=0 ; i<elemspan.length; i++){
+            console.dir(elemspan[i])
+            elemspan[i].style.color = 'red';
+            elemspan[i].style.fontWeight = 'bolder';
+        }
+        const add = () => {
+            console.log('***add fucntion***')
+        }
+        //버튼 클릭
+        const elemBtn = document.querySelector('button');
+        console.log(elemBtn);
+        // elemBtn.onclick = add;
+        elemBtn.addEventListener('click',add);
+        // elemBtn.addEventListener('click',add());
+        // addEventListener의 두번째 인자로 함수를 사용했을때 함수명add 뒤에()를 쓰면 클릭하기전에 무조건 강제 실행이 되므로 함수명 add뒤에()를 빼준다
+
+
+        elemBtn.addEventListener('click',(event) =>{
+            //addEventListener메소드의 두번째 인자로 화살표 함수를 사용하면, 
+            //브라우저는 해당 이벤트 객체를 자동으로 이 함수의 매개변수로 전달합니다.
+            //event = 이벤트객체
+            console.log(event)
+        });
+    </script>
+</body>
+</html>
