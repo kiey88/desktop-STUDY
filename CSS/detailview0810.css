@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 500px;
+}
+.bgimg{
+    height: 400px;
+    background-image: url(../image/0608-2.jpg);
+    background-size: cover;
+    position: relative;
+}
+.bgimg > .open{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+.detail{
+    display: none;
+    text-align: center;
+}

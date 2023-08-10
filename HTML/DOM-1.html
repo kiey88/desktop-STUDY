@@ -40,7 +40,9 @@
             elemspan[i].style.fontWeight = 'bolder';
         }
         const add = () => {
-            console.log('***add fucntion***')
+            // console.log(elemInput1.value)
+            let calc = Number(elemInput1.value) + Number(elemInput2.value);
+            elemspan[2].innerText = calc;
         }
         //버튼 클릭
         const elemBtn = document.querySelector('button');
@@ -52,7 +54,7 @@
 
 
         elemBtn.addEventListener('click',(event) =>{
-            //addEventListener메소드의 두번째 인자로 화살표 함수를 사용하면, 
+            //addEventListener메소드의 두번째 인자로 함수를 사용하면, 
             //브라우저는 해당 이벤트 객체를 자동으로 이 함수의 매개변수로 전달합니다.
             //event = 이벤트객체
             console.log(event)
