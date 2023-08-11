@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            width: 300px;
+            margin: 50px auto;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="../image/image-01.png" alt="image-01">
+    </div>
+    <script>
+        const img = document.querySelector('img');
+        /**
+         * 
+            img.src.endsWith('image-01.png')는 문자열 메소드인 endsWith()를 사용하여 주어진
+            문자열이 특정 문자열로 끝나는지 여부를 확인하는 코드입니다. 여기서 img.src는 이미지 요소의 소스 URL을 나타냅니다.
+            endsWith() 메소드는 문자열이 특정 문자열로 끝나면 true를 반환하고, 그렇지 않으면 false를 반환합니다. 
+            따라서 img.src.endsWith('image-01.png')는 이미지 요소의 소스 URL이 "image-01.png"로 끝나는지 여부를 판단합니다.
+            이 코드는 이미지 요소의 현재 소스 URL이 "image-01.png"로 끝나는지를 확인하여, 이미지를 클릭할 때마다 해당 소스 URL을
+            변경하여 이미지를 토글하는 데 사용됩니다.
+        */
+        img.addEventListener('click',()=>{
+            if (img.src.endsWith('image-01.png')) {
+                img.setAttribute('src', '../image/image-02.png');
+            } else {
+                img.setAttribute('src', '../image/image-01.png');
+            }
+        });
+    </script>
+</body>
+</html>

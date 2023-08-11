@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #wrapper{
+            
+            width: 300px;
+            
+            margin: 50px auto;
+            
+        }
+        .imgwrap{
+            height: 300px;
+            position: relative;
+            
+        }
+        .imgwrap >img{
+            width: 100%;
+        }
+        button{
+            width: 30px;
+            height: 30px;
+            
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        button:nth-of-type(1){
+            left:5px;
+        }
+        button:nth-of-type(2){
+            right:5px;
+        }
+        .small{
+            margin-top: 50px;
+            display:flex;
+            justify-content: space-between;
+        }
+        .small > img{
+            width: 30%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="imgwrap">
+            <img src="../image/image-01.png" alt="image-01">
+            <button>〈</button>
+            <button>〉</button>
+        </div>
+        <div class="small">
+            <img src="../image/image-01.png" alt="image-01">
+            <img src="../image/image-02.png" alt="image-02">
+            <img src="../image/image-03.png" alt="image-03">
+        </div>
+    </div>
+    <script>
+        const smallImg = document.querySelectorAll('.small img')
+        for( let i=0; i<smallImg.length; i++){
+            smallImg[i].addEventListener('click',()=>{
+                console.log( i + 1 +'번이미지입니다');
+            });
+        }
+    </script>
+</body>
+</html>

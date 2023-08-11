@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 500px;
+            margin: 50px auto;
+        }
+        
+        ul{
+            list-style: none;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+        li{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 20%;
+            text-align: center;
+            cursor: pointer;
+        }
+        div.bg{
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="buttons">
+            <li class="green">Green</li>
+            <li class="orange">Orange</li>
+            <li class="purple">Purple</li>
+        </ul>
+        <div class="bg"></div>
+    </div>
+    <script>
+        //background color 변경
+        const onclicklist = (event) =>{
+            console.dir(event.target.textContent);
+            elemResult.style.backgroundColor = event.target.textContent
+            
+        }
+        const elemBg = document.querySelectorAll('li');
+        const elemResult = document.querySelector('.bg');
+        for( let i=0; i<elemBg.length; i++){
+            elemBg[i].addEventListener('click',onclicklist);
+        }
+        
+        
+        </script>
+</body>
+</html>

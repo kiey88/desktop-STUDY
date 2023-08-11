@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect{
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="rect">
+    </div>
+    <script>
+        const box = document.querySelector('.rect')
+        box.addEventListener('mouseover',()=>{
+            // box.setAttribute('style','background-color:red');
+            box.style.backgroundColor = 'red'
+            box.style.borderRadius = '50%'
+        });
+        box.addEventListener('mouseout',()=>{
+            // box.setAttribute('style','background-color:');
+            box.style.backgroundColor = ''
+            box.style.borderRadius = ''
+        });
+    </script>
+</body>
+</html>
