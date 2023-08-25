@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            background-color: gray;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .door{
+            width: 100px;
+            height: 150px;
+            position: relative;
+        }
+        .wrapper > div >.back{
+            background-color: black;
+        }
+        .door > div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .door1 > .front{
+            background-color: red;
+            
+        }
+        .door2 > .front{
+            background-color: green;
+            
+            
+        }
+        .door3 > .front{
+            background-color: blue;
+            
+        }
+        .wrapper > div > div:nth-of-type(2){
+            transform-origin: left center;
+            transition: 1s;
+        }
+        .door-open{
+            
+            transform: perspective(600px) rotateY(-120deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="door1 door">
+            <div class="back"></div>
+            <div class="front"></div>
+        </div>
+        <div class="door2 door">
+            <div class="back"></div>
+            <div class="front"></div>
+        </div>
+        <div class="door3 door">
+            <div class="back"></div>
+            <div class="front"></div>
+        </div>
+    </div>
+    <script>
+        const elemDoor = document.querySelectorAll('.wrapper > div')
+        //.wrapper > div 선택기는 wrapper 클래스가 있는 요소의 바로 옆 <div> 하위 항목을 선택합니다. 
+        
+        //코드에서 이는 door1, door2 및 door3 클래스가 있는 <div> 요소를 선택합니다. back 및 front 클래스가 
+        
+        //있는 <div> 요소를 직접 선택하지 않습니다.
+
+        //무슨 일이 일어나고 있는지 분석해 보면 다음과 같습니다.
+
+        //const elemDoor = document.querySelectorAll('.wrapper > div')는 door1, door2 및 door3 클래스가 있는 <div> 요소를 선택합니다.
+
+        //'click' 이벤트 리스너가 'door1', 'door2', 'door3' 요소에 추가됩니다.
+
+        //front 또는 back 요소를 클릭하면 click 이벤트가 상위 door 요소까지 버블링되고 이벤트 리스너가 트리거됩니다.
+
+        //따라서 back 및 front 요소는 document.querySelectorAll('.wrapper > div')에 의해 직접 선택되지 않지만 
+
+        //해당 요소에 대한 클릭 이벤트는 여전히 상위 door 요소의 이벤트 리스너에 의해 포착됩니다. .
+
+        //버블링-하위 요소에서 트리거된 이벤트가 먼저 해당 하위 요소에 할당된 핸들러를 실행한 다음 가장 안쪽 요소부터
+
+        //바깥쪽으로 계층적 순서로 상위 요소의 핸들러를 실행하는 DOM(문서 개체 모델)의 이벤트 전파 유형입니다.
+
+        //요소에서 이벤트가 시작되면(예: 버튼 클릭) 해당 이벤트에 대해 해당 요소에 할당된 모든 핸들러가 트리거되지만 
+
+        //거기서 멈추지 않습니다. 그런 다음 이벤트는 조상을 통해 "버블업"되어 동일한 이벤트에 대해 해당 요소에 할당된 모든 핸들러를 트리거합니다.
+
+        //핸들러-웹 개발의 이벤트 컨텍스트에서 핸들러는 특정 이벤트나 조건을 관리하거나 "처리"하는 함수 또는 특정 루틴입니다. 
+
+        //특정 이벤트(예: 마우스 클릭, 키 누르기 또는 기타 사용자 상호 작용)가 감지되면 해당 핸들러 기능이 실행됩니다.
+
+        //이벤트 핸들러는 사용자 작업에 응답 피드백을 제공하고, 비동기 작업을 관리하거나, 특정 조건에 따라 프로그램 상태를 변경하는 데 사용됩니다.
+        const onClickDoor = (event) => {
+            let elem = event.target;
+            if( elem.classList.contains('front')){
+                elem.classList.toggle('door-open');
+                // if( !elem.classList.contains('door-open')){
+                //     elem.classList.add('door-open');
+                // } else if(elem.classList.contains('door-open')){
+                //     elem.classList.remove('door-open');
+                // }
+            } else{
+                let next = elem.nextElementSibling;
+                next.classList.toggle('door-open');
+            }
+
+        }
+        const init = () => {
+            elemDoor.forEach((obj) =>{
+                obj.addEventListener('click',onClickDoor);
+                // wrapper > div 영역을 벗어난 열려진 front클래스영역을 클릭해도 이벤트리스너가 click이벤트를 받을수 있는 이유는 
+                // css의 transform 속성 때문에 발생합니다. .door-open 클래스가 적용되면, 해당 요소에는 
+                // rotateY(-120deg) 변형이 적용되고 이로 인해 시각적으로는 영역이 .wrapper > div 영역을 벗어나 보이지만, 
+                // 실제로는 해당 영역 내에 위치하고 있습니다.
+                });
+        };
+        init();
+        console.log(elemDoor);
+    </script>
+</body>
+</html>

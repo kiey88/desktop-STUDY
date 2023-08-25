@@ -8,6 +8,7 @@
  * 첫문자로는 숫자를 사용할수 없다
  * 
  */
+
 let value=10;
 value= "aaa";
 console.log(value);

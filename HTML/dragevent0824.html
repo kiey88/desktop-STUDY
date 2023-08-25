@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border: 1px solid orange;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <script>
+        const elemBox = document.querySelector('#box')
+        // console.dir(elemBox);
+        const mouseRightClick =()=>{
+            console.log("마우스 오른쪽 버튼 클릭")
+            return false;
+        }
+        //mouseRightClick 함수를 정의합니다. 함수 내에서 "오른쪽 클릭"을 콘솔에 기록합니다.
+        //'false'를 반환하면 브라우저는 이 이벤트에 대한 기본 작업을 방지합니다(즉, 컨텍스트 메뉴가 표시되지 않음).
+        
+        elemBox.oncontextmenu = mouseRightClick;
+        //elemBox의 oncontextmenu 이벤트 핸들러에 mouseRightClick 기능을 할당합니다. 
+        //사용자가 요소를 마우스 오른쪽 버튼으로 클릭하면 oncontextmenu 이벤트가 트리거됩니다.
+        //브라우저가 이벤트를 처리하는 방법
+
+        //사용자 마우스 오른쪽 버튼 클릭: 사용자가 box 요소를 마우스 오른쪽 버튼으로 클릭하면 oncontextmenu 이벤트가
+        //트리거됩니다.
+        //핸들러 호출: 이 이벤트를 처리하기 위해 mouseRightClick을 할당했으므로 브라우저는 해당 함수를 호출합니다. 
+        //이로 인해 mouseRightClick 내부의 코드가 실행됩니다.
+        //로그 메시지: console.log("Right click") 라인이 실행되고 브라우저 콘솔에 "Right click"이라는 메시지가 
+        //표시됩니다.
+        //기본 동작 방지: mouseRightClick 함수의 false 반환 값은 브라우저에 기본 컨텍스트 메뉴를 표시하지 않도록 
+        //지시합니다. 이것이 기본 오른쪽 클릭 동작이 억제되는 방법입니다.
+
+        //결론
+
+        //함수 선언만으로 이벤트가 처리되는 이유는 자바스크립트에서 이벤트를 처리하는 방식 때문입니다. 
+        //요소의 oncontextmenu 속성에 함수를 할당하면 해당 요소의 마우스 오른쪽 버튼 클릭 이벤트를 함수에 직접 
+        //연결하게 됩니다.이렇게 하면 브라우저는 해당 요소에서 컨텍스트 메뉴가 실행될 때마다
+        //(보통 해당 요소를 마우스 오른쪽 버튼으로 클릭하여)
+        //mouseRightClick 함수가 호출되어야 한다는 것을 알게 됩니다.
+        //브라우저는 해당 이벤트를 수신하고 이벤트가 발생하면 할당된 함수가 호출되고 그 안의 
+        //코드가 실행됩니다.
+    </script>
+</body>
+</html>

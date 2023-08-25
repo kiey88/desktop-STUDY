@@ -1,0 +1,33 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wrapper > div{
+    width: 200px;
+    height: 200px;
+    margin: 0 30px;
+}
+#com , #self{
+    background-image: url(./image/KakaoTalk_20230824_141946728.png);
+    background-size: auto 200px;
+    background-position: 0px;
+    /*가위-0 바위-200 보-400**/
+}
+#self > div{
+    text-align: center;
+    position: relative;
+    top: 240px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+#self > div > button{
+    flex: 1;
+}
