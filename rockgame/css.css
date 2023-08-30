@@ -31,3 +31,8 @@
 #self > div > button{
     flex: 1;
 }
+#result{
+    text-align: center;
+    color: blue;
+    font-size: 60px;
+}

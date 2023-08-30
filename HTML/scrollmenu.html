@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollmenu</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        h1{
+            text-align: center;
+            padding: 100px 0;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        nav{
+            background-color: greenyellow
+        }
+        nav > a{
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 1.5rem;
+        }
+        nav > a:hover{
+            background-color: yellow;
+        }
+        main{
+            padding: 20px;
+            height: 300vh;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>scroll down</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit explicabo minus voluptas. Unde perferendis minima tempore libero laboriosam possimus a suscipit minus voluptas. Tenetur, ipsa perferendis error impedit magni ducimus!
+    </main>
+    <script>
+        const elemNav = document.querySelector('nav');
+        // let navTop = elemNav.getBoundingClientRect().top;
+        const navTop = elemNav.offsetTop;
+        const onScrollEvent = ()=>{
+            
+            const {scrollTop} = document.documentElement;
+            if(scrollTop >= navTop){
+                elemNav.classList.add('sticky')
+            }else{
+                elemNav.classList.remove('sticky')
+            }
+        }
+        
+        const init = () =>{
+            window.addEventListener('scroll',onScrollEvent);
+        }
+        init();
+    </script>
+</body>
+</html>

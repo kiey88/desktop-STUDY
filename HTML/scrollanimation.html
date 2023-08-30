@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        main{
+            background-color: yellowgreen;
+            height: 1000vh;
+            padding: 60%;
+        }
+        img{
+            width: 150px;
+            transition: 1s;
+        }
+        img.zoom{
+            transform: scale(4);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium inventore autem et veritatis ipsum ab beatae, sequi facilis, tempore sapiente optio reiciendis error eligendi dolor dolorem eum perferendis aut. Fuga.
+        </p>
+        <img src="/image/girl-7832385_640.webp" alt="#">
+    </main>
+    <script>
+        const elemImg = document.querySelector('img');
+        
+        const onScrollEvent = ()=>{
+            const {clientHeight} = document.documentElement
+            const h = clientHeight / 2;
+            let posY = elemImg.getBoundingClientRect().top
+            if( posY < h){
+                elemImg.classList.add('zoom')
+            }else{
+                elemImg.classList.remove('zoom')
+            }
+        }
+        const init= () => {
+            window.addEventListener('scroll',onScrollEvent);
+        }
+        init();
+    </script>
+</body>
+</html>
