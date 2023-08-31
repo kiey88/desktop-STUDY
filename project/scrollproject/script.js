@@ -5,6 +5,11 @@ const onScrollEvent =()=>{
     const realHeight = scrollHeight - clientHeight
     const percent = Math.floor(( scrollTop / realHeight)*100);
     console.log(percent)
+    if (0 < percent ){
+        
+        elemBg[0].classList.remove('active')
+        elemBg[3].classList.add('active')
+    }
     if ( 25 < percent ){
         
         elemBg[0].classList.remove('active')
@@ -12,7 +17,7 @@ const onScrollEvent =()=>{
     } else if (50 < percent){
         elemBg[1].classList.remove('active')
         elemBg[2].classList.add('active')
-    } else if (75 <percent ){
+    } else if (75 < percent ){
         elemBg[2].classList.remove('active')
         elemBg[3].classList.add('active')
     }
@@ -20,6 +25,6 @@ const onScrollEvent =()=>{
 
 const init =()=>{
     window.addEventListener('scroll',onScrollEvent)
-    elemBg[0].classList.add('active')
+    
 }
 init();
