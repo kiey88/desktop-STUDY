@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,li{
+    list-style: none;
+}
+
+/**reset*/
+
+
+
+body{
+    height: 500vh;
+    min-width: 320px;
+}
+html,button{
+    font-size: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    
+}
+.logo{
+    cursor: pointer;
+}
+.logoimg{
+    width: 120px;
+    
+}
+nav> .gnb{
+    display: flex;
+}
+nav> .gnb > li{
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+header > .home{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url(../img/e3f95371334d724dd486fb726fec8d6f.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-size: 100vw 100vh;
+    background-position: top center;
+}
+header > .home > .container >*{
+    margin: 2rem 0 ;
+}
+header > .home h2{
+    font-size: 2rem;
+}
+header > .home h3{
+    font-size: 4em;
+    
+}
+header > .home span.blink{
+    animation: blink 0.5s infinite ;
+}
+header > .home button{
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border:2px solid #fff;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+}
+header > .home video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+/* animation */
+@keyframes blink{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+
+/* 미디어 쿼리 작성*/
+/* 기본 레이아웃은 모바일을 기준으로 함*/
+/*태블릿*/
+@media all and (min-width: 768px){
+    html{
+        font-size: 12px;
+    }
+}
+/*pc형*/
+@media all and (min-width:1024px){
+    html{
+        font-size: 14px;
+    }
+}
