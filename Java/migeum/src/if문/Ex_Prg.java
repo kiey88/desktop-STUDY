@@ -124,28 +124,42 @@ import java.util.Scanner;
 //}
 
 //문제6 
+//class Ex_Prg{
+//	public static void main(String[] args) {
+//
+//		Scanner sc = new Scanner(System.in);
+//		int num1, num2, num3;
+//		System.out.print("국어 영어 수학 점수를 입력하세요:");
+//		num1=sc.nextInt();
+//		num2=sc.nextInt();
+//		num3=sc.nextInt();
+//		//60 60 60 이렇게 입력가능
+//		//60
+//		//60
+//		//60 세로로 이렇게도 입력 가능
+//		int avg= (num1+num2+num3)/3;
+//		if(avg<60) {
+//			System.out.println("불합격입니다 노력하세요~");
+//		}else {
+//			System.out.println("합격입니다");
+//		}
+//	}
+//}
+// 문제7
 class Ex_Prg{
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		int num1, num2, num3;
-		System.out.print("국어 영어 수학 점수를 입력하세요:");
-		num1=sc.nextInt();
-		num2=sc.nextInt();
-		num3=sc.nextInt();
-		//60 60 60 이렇게 입력가능
-		//60
-		//60
-		//60 세로로 이렇게도 입력 가능
-		int avg= (num1+num2+num3)/3;
-		if(avg<60) {
-			System.out.println("불합격입니다 노력하세요~");
-		}else {
-			System.out.println("합격입니다");
-		}
+	Scanner sc = new Scanner(System.in);
+	int num1,num2,num3
+	System.out.print("국어 영어 수학 점수를 입력하세요:");
+	num1=sc.nextInt();
+	num2=sc.nextInt();
+	num3=sc.nextInt();
+	if(num1<60||num2<60||num3<60||) {
+		System.out.println("안됐군요 ㅠㅠ 불합격");
+	}	
+	if((num1+num2+num3)/3<60) {
+		System.out.println("안됐군요 ㅠㅠ 불합격");
+	}else {System.out.println("축하합니다!합격입니다");
 	}
-}
-
 
 
 
