@@ -379,6 +379,34 @@ import java.util.Scanner;
 //		}
 //	}
 //}
+//class Ex_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("3개의 수 :");
+//		int a = sc.nextInt();
+//		int b = sc.nextInt();
+//		int c = sc.nextInt();
+//		int k;
+//		if(a<b){
+//			k=a;
+//			a=b;
+//			b=k;
+//		} 
+//		if(a<c){
+//			k=a;
+//			a=c;
+//			c=k;
+//		}
+//		if(b<c) {
+//			k=b;
+//			b=c;
+//			c=k;
+//
+//		}
+//		System.out.printf("큰 순서대로 출력: %d  %d  %d\n",a,b,c);
+//	}
+//}
+
 //문제18
 //class Ex_Prg{
 //	public static void main(String[] args) {
@@ -420,62 +448,113 @@ import java.util.Scanner;
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("어떤 도형의 면적을 구할까요?(R-사각형,T-삼각형,C-원:");
 //		String figure = sc.nextLine();
-//		char type = figure.charAt(0);
-//		if(type == 82) {
+//		if(figure.equals("R")) {
 //			System.out.println("가로:");
 //			System.out.println("세로:");
 //			int width = sc.nextInt();
 //			int height = sc.nextInt();
 //			System.out.println("사각형의 면적은"+(width*height)+"입니다");	
-//		} else if(type == 84) {
+//		} else if(figure.equals("T")) {
 //			System.out.println("밑변:");
 //			System.out.println("높이:");
 //			int bottom = sc.nextInt();
 //			int height = sc.nextInt();
 //			System.out.println("사각형의 면적은"+(bottom*height)/2+"입니다");
-//		} else if(type == 67) {
+//		} else if(figure.equals("C")) {
 //			System.out.println("반지름:");
 //			double h = sc.nextDouble();
 //			System.out.println("원의 면적은"+3.14159*h*h+"입니다");
 //		}
 //	}
 //}
-class Ex_Prg{
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("나이를 입력하세요:");
-		int old = sc.nextInt();
-		System.out.println("키를 입력하세요:");
-		double height = sc.nextDouble();
-		System.out.println("체중을 입력하세요:");
-		int weight = sc.nextInt();
-				
-		double h1 = height/100;
-		double h2 = Math.round(h1*h1 * 10) / 10.0;
-		double kauf = Math.round((weight/h2) * 10) / 10.0;
-		System.out.println(kauf);
-		if(old>=20 && old<30) {
-			if(kauf <=17.9 ) {
-				System.out.println("당신은 저체중입니다");	
-			}else if (kauf >=18 && kauf <= 23){
-				System.out.println("당신은 표준체중입니다");
-			}else if(kauf >=24 && kauf <= 30 ) {
-				System.out.println("당신은 과체중입니다");
-			}else if(kauf > 30 ) {
-				System.out.println("당신은 비만체중입니다");
-			} 
-			else if(old>=30 && old<40) {
-				if(kauf <=18.4 ) {
-					System.out.println("당신은 저체중입니다");	
-				}else if (kauf >=18.5 && kauf <= 23){
-					System.out.println("당신은 표준체중입니다");
-				}else if(kauf >=24 && kauf <= 30 ) {
-					System.out.println("당신은 과체중입니다");
-				}else if(kauf > 30 ) {
-					System.out.println("당신은 비만체중입니다");
-				}
-			}
-		}
-	}
-}
+//문제20
+//class Ex_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("나이를 입력하세요:");
+//		int old = sc.nextInt();
+//		System.out.println("키를 입력하세요:");
+//		double height = sc.nextDouble();
+//		System.out.println("체중을 입력하세요:");
+//		int weight = sc.nextInt();
+//				
+//		double h1 = height/100;
+//		double h2 = Math.round(h1*h1 * 10) / 10.0;
+//		double kauf = Math.round((weight/h2) * 10) / 10.0;
+//		System.out.println(kauf);
+//		if(old>=20 && old<30) {
+//			if(kauf <=17.9 ) {
+//				System.out.println("당신은 저체중입니다");	
+//			}else if (kauf >=18 && kauf <= 23){
+//				System.out.println("당신은 표준체중입니다");
+//			}else if(kauf >=24 && kauf <= 30 ) {
+//				System.out.println("당신은 과체중입니다");
+//			}else if(kauf > 30 ) {
+//				System.out.println("당신은 비만체중입니다");
+//			} 
+//			else if(old>=30 && old<40) {
+//				if(kauf <=18.4 ) {
+//					System.out.println("당신은 저체중입니다");	
+//				}else if (kauf >=18.5 && kauf <= 23){
+//					System.out.println("당신은 표준체중입니다");
+//				}else if(kauf >=24 && kauf <= 30 ) {
+//					System.out.println("당신은 과체중입니다");
+//				}else if(kauf > 30 ) {
+//					System.out.println("당신은 비만체중입니다");
+//				}
+//			}
+//		}
+//	}
+//}
+//
+// switch
+//class Ex_Prg{
+//	public static void main(String[] args) {
+//		int n=3;
+//		switch(n) {
+//		case 1:System.out.println("Simple Java");break;
+//		case 2:System.out.println("Funny Java");break;
+//		case 3:System.out.println("Fantastic Java");break;
+//		default:System.out.println("The best programming language");break;
+//		}
+//		System.out.println("do you like coffee?");
+//	}
+//}
+//class Ex_Prg{
+//	public static void main(String[] args) {
+//		int month = 0;
+//		System.out.print("현재 월을 입력하세요.>");
+//		Scanner scanner = new Scanner(System.in);
+//		String tmp = scanner.nextLine();
+//		month = Integer.parseInt(tmp);
+//
+//		switch(month) {
+//		case 3:
+//		case 4:
+//		case 5:
+//			System.out.println("현재의 계절은 봄입니다");
+//			break;
+//		case 6: case 7: case 8:
+//			System.out.println("현재의 계절은 여름입니다");
+//			break;
+//		case 9: case 10: case 11:
+//			System.out.println("현재의 계절은 가을입니다");
+//			break;
+//		default:
+//		case 12: case 1: case 2:
+//			System.out.println("현재의 계절은 겨울입니다");
+//		}
+//	}
+//}
+
+
+
+
+
+
+
+
+
+
+
 
