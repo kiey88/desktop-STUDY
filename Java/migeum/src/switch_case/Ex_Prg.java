@@ -65,6 +65,7 @@ import java.util.Scanner;
 //		}
 //	}
 //}
+//문제 1
 //public class Ex_Prg{
 //	public static void main(String args[]) {
 //
@@ -84,31 +85,130 @@ import java.util.Scanner;
 //
 //	}
 //}
+//문제2
+//public class Ex_Prg{
+//	public static void main(String args[]) {
+//
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("첫번째 수를 입력하세요:");
+//		int num1 = scanner.nextInt();
+//		scanner.nextLine();
+//		System.out.println("연산자(+ - * /)를 입력하세요:");
+//		String op = scanner.nextLine();
+//		System.out.println("두번째 수를 입력하세요:");
+//		int num2 = scanner.nextInt();
+//		
+//		switch(op) {
+//		case "+":
+//			System.out.println(num1+"+"+num2+"="+(num1+num2)); break;
+//		case "-":
+//			System.out.println(num1+"-"+num2+"="+(num1-num2)); break;
+//		case "*":
+//			System.out.println(num1+"*"+num2+"="+(num1*num2)); break;
+//		case "/":
+//			System.out.println(num1+"/"+num2+"="+(num1/num2)); break;
+//		default:
+//			System.out.println("연산자가 잘못 입력되었습니다."); break;
+//		}
+//
+//	}
+//}
+//문제3
+//public class Ex_Prg{
+//	public static void main(String arg[]) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("나이를 입력하세요:");
+//		String temp = sc.nextLine();
+//		char year = temp.charAt(0);
+//		;
+//		switch(year) {
+//		case '1':
+//			System.out.println("당신은 10대"); break;
+//		case '2':
+//			System.out.println("당신은 20대");	break;
+//		case '3':
+//			System.out.println("당신은 30대"); break;
+//		default :
+//			System.out.println("당신은 기타"); break;
+//		}
+//
+//	}
+//}
+//문제4
+//public class Ex_Prg{
+//	public static void main(String arg[]) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("국어 영어 수학점수를 입력하세요:");
+//		int ko = sc.nextInt();
+//		int en = sc.nextInt();
+//		int ma = sc.nextInt();
+//		int op = (ko+en+ma)/3;
+//		String tem = Integer.toString(op);
+//		char avg = tem.charAt(0);
+//		
+//		if(op >= 10&&op <=19) {
+//			System.out.println("F학점");
+//		} 
+//		else {
+//			switch(avg) {
+//			case '9':
+//				System.out.println("A학점"); break;
+//			case '8':
+//				System.out.println("B학점");	break;
+//			case '7':
+//				System.out.println("C학점"); break;
+//			case '6':
+//				System.out.println("D학점"); break;
+//			case '1':
+//				System.out.println("A학점"); break;
+//			}
+//		}
+//
+//	}
+//}
+//문제 5
+//public class Ex_Prg{
+//public static void main(String arg[]) {
+//	Scanner sc = new Scanner(System.in);
+//	System.out.println("가위(1)바위(2)보(3)중 하나를 입력하세요:");
+//	int you = sc.nextInt();
+//	int com = (int)(Math.random()*3)+1;
+//	int result = you - com;
+//	System.out.println("당신은"+ you +"입니다");
+//	System.out.println("컴퓨터는"+ com +"입니다");
+//		switch(result) {
+//		case 0:
+//			System.out.println("비겼습니다"); break;
+//		case -1:
+//			System.out.println("졌습니다"); break;
+//		case 2:
+//			System.out.println("졌습니다"); break;
+//		case 1:
+//			System.out.println("이겼습니다"); break;
+//		case -2:
+//			System.out.println("이겼습니다"); break;
+//		}
+//	}
+//
+//}
+//문제 6
 public class Ex_Prg{
-	public static void main(String args[]) {
+public static void main(String arg[]) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("당신의 주민등록번호를 입력하세요:");
+	String you = sc.nextLine();
+	char num = you.charAt(7);
+		switch(num) {
+		case '1':
+			System.out.println("당신은 2000년이전에 출생한 남자입니다"); break;
+		case '2':
+			System.out.println("당신은 2000년이전에 출생한 여자입니다"); break;
+		case '3':
+			System.out.println("당신은 2000년이후에 출생한 남자입니다"); break;
+		case '4':
+			System.out.println("당신은 2000년이후에 출생한 여자입니다"); break;
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("첫번째 수를 입력하세요:");
-		int num1 = scanner.nextInt();
-		scanner.nextLine();
-		System.out.println("연산자(+ - * /)를 입력하세요:");
-		String temp = scanner.nextLine();
-		int op = Integer.parseInt(temp);
-		System.out.println("두번째 수를 입력하세요:");
-		int num2 = scanner.nextInt();
-		
-		switch(op) {
-		case 43:
-			System.out.println(num1+"+"+num2+"="+(num1+num2)); break;
-		case 45:
-			System.out.println(num1+"-"+num2+"="+(num1-num2)); break;
-		case 42:
-			System.out.println(num1+"*"+num2+"="+(num1*num2)); break;
-		case 47:
-			System.out.println(num1+"/"+num2+"="+(num1/num2)); break;
-		default:
-			System.out.println("연산자가 잘못 입력되었습니다."); break;
 		}
-
 	}
+
 }
