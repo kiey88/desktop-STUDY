@@ -118,20 +118,18 @@ import java.util.Scanner;
 //	public static void main(String arg[]) {
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("나이를 입력하세요:");
-//		String temp = sc.nextLine();
-//		char year = temp.charAt(0);
-//		;
-//		switch(year) {
-//		case '1':
+//		int temp = sc.nextInt();
+//				
+//		switch(temp/10) {
+//		case 1:
 //			System.out.println("당신은 10대"); break;
-//		case '2':
+//		case 2:
 //			System.out.println("당신은 20대");	break;
-//		case '3':
+//		case 3:
 //			System.out.println("당신은 30대"); break;
 //		default :
 //			System.out.println("당신은 기타"); break;
 //		}
-//
 //	}
 //}
 //문제4
@@ -142,30 +140,26 @@ import java.util.Scanner;
 //		int ko = sc.nextInt();
 //		int en = sc.nextInt();
 //		int ma = sc.nextInt();
-//		int op = (ko+en+ma)/3;
-//		String tem = Integer.toString(op);
-//		char avg = tem.charAt(0);
-//		
-//		if(op >= 10&&op <=19) {
-//			System.out.println("F학점");
-//		} 
-//		else {
-//			switch(avg) {
-//			case '9':
-//				System.out.println("A학점"); break;
-//			case '8':
-//				System.out.println("B학점");	break;
-//			case '7':
-//				System.out.println("C학점"); break;
-//			case '6':
-//				System.out.println("D학점"); break;
-//			case '1':
-//				System.out.println("A학점"); break;
-//			}
-//		}
 //
+//
+//		switch((ko+en+ma)/3/10) {
+//		case 10:
+//			System.out.println("A학점"); break;
+//		case 9:
+//			System.out.println("A학점");	break;
+//		case 8:
+//			System.out.println("B학점"); break;
+//		case 7:
+//			System.out.println("C학점"); break;
+//		case 6:
+//			System.out.println("D학점"); break;
+//		default:
+//			System.out.println("F학점"); break;
+//		}
 //	}
+//
 //}
+
 //문제 5
 //public class Ex_Prg{
 //public static void main(String arg[]) {
@@ -192,23 +186,23 @@ import java.util.Scanner;
 //
 //}
 //문제 6
-public class Ex_Prg{
-public static void main(String arg[]) {
-	Scanner sc = new Scanner(System.in);
-	System.out.println("당신의 주민등록번호를 입력하세요:");
-	String you = sc.nextLine();
-	char num = you.charAt(7);
-		switch(num) {
-		case '1':
-			System.out.println("당신은 2000년이전에 출생한 남자입니다"); break;
-		case '2':
-			System.out.println("당신은 2000년이전에 출생한 여자입니다"); break;
-		case '3':
-			System.out.println("당신은 2000년이후에 출생한 남자입니다"); break;
-		case '4':
-			System.out.println("당신은 2000년이후에 출생한 여자입니다"); break;
-
-		}
-	}
-
-}
+//public class Ex_Prg{
+//public static void main(String arg[]) {
+//	Scanner sc = new Scanner(System.in);
+//	System.out.println("당신의 주민등록번호를 입력하세요:");
+//	String you = sc.nextLine();
+//	char num = you.charAt(7);
+//		switch(num) {
+//		case '1':
+//			System.out.println("당신은 2000년이전에 출생한 남자입니다"); break;
+//		case '2':
+//			System.out.println("당신은 2000년이전에 출생한 여자입니다"); break;
+//		case '3':
+//			System.out.println("당신은 2000년이후에 출생한 남자입니다"); break;
+//		case '4':
+//			System.out.println("당신은 2000년이후에 출생한 여자입니다"); break;
+//
+//		}
+//	}
+//
+//}
