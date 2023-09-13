@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+        
+        *{
+            margin: 0; padding: 0;
+        }
+        body{ height: 100vh;
+            font-family: 'Heebo', sans-serif;}
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section >p{
+            font-size: 15rem;
+            font-weight: bolder;
+            
+        }
+        /*글씨 테두리만 사용*/
+        .sec1>p{
+            
+            color: transparent;
+            -webkit-text-stroke: 3px #000;
+        }
+        /*글씨 그라데이션*/
+        .sec2>p{
+            color: transparent;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,62,1) 45%, rgba(0,212,255,1) 100%);
+            -webkit-background-clip: text;
+        }
+        .sec1{
+            background-color: aqua;
+        }
+        .sec2{
+            background-color: rgb(28, 178, 63);
+        }
+        .sec3{
+            background-color: rgb(55, 18, 238);
+        }
+        .sec4{
+            background-color: rgb(255, 0, 0);
+        }
+        /*css로 한페이지씩 이동*/
+        .wrapper{
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+        }
+        section{
+            scroll-snap-align: start;
+        }
+        /*위치를 알려주는 동그라미*/
+        .pos{
+            position:fixed;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%)
+
+        }
+        .pos > p{
+            background-color: #000;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="sec1"><p>Section 01</p></section>
+        <section class="sec2"><p>Section 02</p></section>
+        <section class="sec3"><p>Section 03</p></section>
+        <section class="sec4"><p>Section 04</p></section>
+    </div>
+    <div class="pos">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        let currentPage = 0;
+        
+        const onEventWheel = ()=>{
+            event.preventDefault();
+            const {clientHeight}= document.documentElement;
+            console.log("clientHeight",clientHeight);
+            console.log("deltaY 값:",event.deltaY);
+            console.log("currentpage",currentPage)
+            if(event.deltaY < 0){
+                //휠을 위로 올리기
+                currentPage--;
+                console.log("currentpage",currentPage)
+                if(currentPage <=0){currentPage=0;}
+            }else{
+                //휠을 아래로 내리기
+                currentPage++;
+                console.log("currentpage",currentPage)
+                if(currentPage >=3){currentPage=3;}
+            }
+            let scrollTop = currentPage*clientHeight;
+            console.log("ScrollTop 값: ", scrollTop);
+            window.scrollTo({left:0,top:scrollTop,behavior:"smooth"});
+        }
+        
+        window.addEventListener('mousewheel',onEventWheel,{passive:false});
+    </script>
+</body>
+</html>
