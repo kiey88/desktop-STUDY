@@ -120,32 +120,43 @@ import java.util.*;
 //}
 //63-50=13
 //2번문제
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		System.out.printf("1)");
+//		for( int i=2;i<=10;i+=2){
+//			System.out.printf("%3d",i);			
+//		
+//		};
+//		System.out.println();
+//		System.out.printf("2)");
+//		for( int c=9;c>=1;c--){
+//			System.out.printf("%2d",c);
+//		}
+//		System.out.println();
+//		System.out.printf("3)");
+//		for( int b=3;b<=15;b+=3){
+//			System.out.printf("%3d",b);
+//		}
+//	}
+//}
+//문제3 1에서 10까지 출력이 안되는 원인
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		int i;
+//		for(i=1; i<10; i++);
+//			System.out.printf("%d ",i);			
+//}
+//}	
+//for문뒤에 세미콜론이 오기때문에 루프가 실행되는 동안 루프내무에서는 아무런 동작이 되지 않는다
+//세미콜론을 제거하고 중괄호를 추가해야 한다
+//문제4 구구단을 작성해 봅시다
 public class EX_Prg {
 	public static void main(String[] arg) {
-		System.out.printf("1)");
-		for( int i=2;i<=10;i++){
-			System.out.printf("%2d",i);
-		};
-		System.out.println();
-		int c;
-		for( c=9;c<=1;c--){
-			System.out.printf("2)%2d",c);
+		for(int i=1;i<=9;i++) {
+			System.out.println(3+"*"+i+"="+3*i);
 		}
-		
-		int b;
-		for( b=3;b<=15;b+=3){
-			System.out.printf("3)%2d",b);
-		}
-		
-		
-		System.out.printf("3)%2d",b);
 	}
 }
-
-
-
-
-
 
 
 
