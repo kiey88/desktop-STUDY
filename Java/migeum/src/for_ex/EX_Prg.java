@@ -150,14 +150,152 @@ import java.util.*;
 //for문뒤에 세미콜론이 오기때문에 루프가 실행되는 동안 루프내무에서는 아무런 동작이 되지 않는다
 //세미콜론을 제거하고 중괄호를 추가해야 한다
 //문제4 구구단을 작성해 봅시다
-public class EX_Prg {
-	public static void main(String[] arg) {
-		for(int i=1;i<=9;i++) {
-			System.out.println(3+"*"+i+"="+3*i);
-		}
-	}
-}
-
-
-
-
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		for(int i=1;i<=9;i++) {
+//			System.out.println(3+"*"+i+"="+3*i);
+//		}
+//	}
+//}
+//문제 5 키보드에서 단을 입력받아 해당되는 구구단 출력
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.printf("몇단을 출력할까요:");
+//		int d = sc.nextInt();
+//		if(d>=2) {
+//			for(int i=1;i<=9;i++) {
+//				System.out.println(d+"*"+i+"="+d*i);
+//			}
+//		}
+//	}
+//}
+//6번 문제
+//public class EX_Prg {
+//    public static void main(String[] arg) {
+//        int d = 0; 
+//        for(int i = 1; i <= 10; i++) {
+//            System.out.printf("%d", i); 
+//            d += i; 
+//            if (i < 10) {
+//                System.out.print("+"); 
+//            } else {
+//                System.out.print("=" + d); 
+//            }
+//        }
+//    }
+//}
+//문제7
+//public class EX_Prg {
+//    public static void main(String[] arg) {
+//        int d = 1; 
+//        System.out.printf("4!=");
+//        for(int i = 4; i >= 1; i--) {
+//            System.out.printf("%d", i); 
+//            d *= i; 
+//            if (i >1) {
+//                System.out.print("*"); 
+//            } else {
+//                System.out.print("=" + d); 
+//            }
+//        }
+//    }
+//}
+//문제 8
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		char M;
+//		for( M='z'; M >='a'; M--) {
+//			System.out.printf("%c",M);
+//
+//		}
+//		System.out.println();
+//		for( M='A'; M<='Z'; M++) {
+//			System.out.printf("%c",M);
+//		}
+//		System.out.println();
+//		int S = 122;
+//		for( int N=97; N<=122; N++) {
+//			System.out.printf("%c",N);			
+//			if (N<=122) {
+//				System.out.printf("%C",S);
+//				S--;
+//			}
+//		} 
+//	}
+//}
+//문제 9
+//public class EX_Prg {
+//	    public static void main(String[] args) {
+//	        Scanner scanner = new Scanner(System.in);
+//	        int sum = 0;          
+//	        System.out.print("입력할 숫자의 개수는?: ");
+//	        int count = scanner.nextInt();      
+//	        for (int i = 0; i < count; i++) {
+//	            int num = scanner.nextInt();
+//	            sum += num;
+//	        } 
+//	        System.out.println("합=" + sum);
+//    
+//	    }
+//}
+//문제10.
+//public class EX_Prg {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);                  
+//        System.out.print("막대#의 높이: ");
+//        int count = scanner.nextInt();      
+//        for (int i = 0; i < count; i++) {
+//            System.out.printf("#");
+//        } 
+//    }
+//}
+//문제11
+//public class EX_Prg {
+//	public static void main(String[] args) {
+//		Scanner scanner = new Scanner(System.in);         
+//		System.out.print("숫자를 입력하세요:");
+//		int num = scanner.nextInt();       
+//		System.out.println("1부터"+num+"사이에 존재하는 3의 배수는"+num/3+"개입니다");
+//
+//	}
+//}
+//문제12
+//public class EX_Prg {
+//public static void main(String[] args) {
+//	Scanner scanner = new Scanner(System.in);         
+//	System.out.print("숫자를 입력하세요:");
+//	int num = scanner.nextInt();       
+//	System.out.printf(num+"의 약수는 ");
+//	for (int i = 1; i <= num; i++) {
+//        if (num % i == 0) {
+//            System.out.print( i + " ");
+//        }
+//    }
+//	System.out.printf("입니다");
+//}
+//}
+//문제13
+//public class EX_Prg {
+//	public static void main(String[] args) {
+//		Scanner scanner = new Scanner(System.in);        
+//		System.out.print("수1: ");
+//		int num1 = scanner.nextInt();        
+//		System.out.print("수2: ");
+//		int num2 = scanner.nextInt();        
+//		int gcd = 1;  
+//		int smaller;        
+//		if (num1 < num2) {
+//			smaller = num1;
+//		} else {
+//			smaller = num2;
+//		}        
+//		for (int i = 1; i <= smaller; i++) {
+//			if (num1 % i == 0 && num2 % i == 0) {
+//				gcd = i;  
+//			}
+//		}                
+//		System.out.println(num1 + "과 " + num2 + "의 최대공약수는 " + gcd + "입니다.");
+//		
+//	}
+//}
