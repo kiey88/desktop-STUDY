@@ -283,7 +283,7 @@ import java.util.*;
 //		int num1 = scanner.nextInt();        
 //		System.out.print("수2: ");
 //		int num2 = scanner.nextInt();        
-//		int gcd = 1;  
+//		int max = 0;  
 //		int smaller;        
 //		if (num1 < num2) {
 //			smaller = num1;
@@ -292,10 +292,85 @@ import java.util.*;
 //		}        
 //		for (int i = 1; i <= smaller; i++) {
 //			if (num1 % i == 0 && num2 % i == 0) {
-//				gcd = i;  
+//				max = i;  
 //			}
 //		}                
-//		System.out.println(num1 + "과 " + num2 + "의 최대공약수는 " + gcd + "입니다.");
-//		
+//		System.out.println(num1 + "과 " + num2 + "의 최대공약수는 " + max + "입니다.");
+//
 //	}
 //}
+//문제14
+//public class EX_Prg {
+//	public static void main(String[] args) {
+//		Scanner scanner = new Scanner(System.in);        
+//		System.out.print("수1: ");
+//		int num1 = scanner.nextInt();        
+//		System.out.print("수2: ");
+//		int num2 = scanner.nextInt();        
+//		int bigger, smaller, min;
+//
+//		if (num1 > num2) {
+//			bigger = num1;
+//			smaller = num2;
+//		} else {
+//			bigger = num2;
+//			smaller = num1;
+//		}
+//
+//		for (int i = 1;; i++) {
+//			min = bigger * i;
+//			if (min % smaller == 0) {
+//				break;
+//			}
+//		}
+//
+//		System.out.println(num1 + "과 " + num2 + "의 최소공배수는 " + min + "입니다.");
+//	}
+//}
+//문제15
+//public class EX_Prg {
+//	public static void main(String[] args) {
+//		int result = 100;
+//		for(int i=0;i<=100;i++) {
+//				result -= i;
+//			if(result<0) {
+//				System.out.println(result);
+//				System.out.println(i);
+//				break;
+//			}
+//		}
+//	}
+//}
+//문제16
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc= new Scanner(System.in);
+//		System.out.println("수를 입력하세요:");
+//		int num = sc.nextInt();
+//		if(num==1) {
+//			System.out.println(num+"은 소수가 아님");
+//		}
+//		for(int i=1;i<=num;i++) {
+//			if(num%i==0) {
+//				if(i==1) {
+//					continue;										
+//				}
+//				if(i==num) {
+//					System.out.println(num+"은 소수");
+//					break;
+//				}
+//				if(i>1) {
+//					System.out.println(num+"은 소수가 아님");
+//					break;
+//				}
+//			}
+//		}
+//	}
+//}
+//문제17
+public class EX_Prg{
+	
+}
+
+
+
