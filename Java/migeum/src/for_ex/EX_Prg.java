@@ -172,34 +172,27 @@ import java.util.*;
 //}
 //6번 문제
 //public class EX_Prg {
-//    public static void main(String[] arg) {
-//        int d = 0; 
-//        for(int i = 1; i <= 10; i++) {
-//            System.out.printf("%d", i); 
-//            d += i; 
-//            if (i < 10) {
-//                System.out.print("+"); 
-//            } else {
-//                System.out.print("=" + d); 
-//            }
-//        }
-//    }
+//	public static void main(String[] arg) {
+//		int d = 0; 
+//		for(int i = 1; i <= 10; i++) {
+//			System.out.printf("%d+", i); 
+//			d += i; 
+//		}
+//		System.out.printf("\b=%d",d); 
+//	}
 //}
 //문제7
 //public class EX_Prg {
-//    public static void main(String[] arg) {
-//        int d = 1; 
-//        System.out.printf("4!=");
-//        for(int i = 4; i >= 1; i--) {
-//            System.out.printf("%d", i); 
-//            d *= i; 
-//            if (i >1) {
-//                System.out.print("*"); 
-//            } else {
-//                System.out.print("=" + d); 
-//            }
-//        }
-//    }
+//	public static void main(String[] arg) {
+//		int d = 1; 
+//		System.out.printf("4!=");
+//		for(int i = 4; i >= 1; i--) {
+//			System.out.printf("%d*", i); 
+//			d *= i; 
+//		}
+//
+//		System.out.print("=" + d); 
+//	}
 //}
 //문제 8
 //public class EX_Prg {
@@ -209,21 +202,18 @@ import java.util.*;
 //			System.out.printf("%c",M);
 //
 //		}
-//		System.out.println();
-//		for( M='A'; M<='Z'; M++) {
-//			System.out.printf("%c",M);
-//		}
-//		System.out.println();
-//		int S = 122;
-//		for( int N=97; N<=122; N++) {
-//			System.out.printf("%c",N);			
-//			if (N<=122) {
-//				System.out.printf("%C",S);
-//				S--;
-//			}
-//		} 
 //	}
 //}
+// 'A'-'Z': 65-90 'a'-'z':97-122
+//public class EX_Prg {
+//	public static void main(String[] arg) {
+//		int S,N;		
+//		for( N=97,S=90; N<=122; N++,S--) {
+//			System.out.printf("%c%c",N,S);					
+//			}
+//		}
+//}
+
 //문제 9
 //public class EX_Prg {
 //	    public static void main(String[] args) {
@@ -256,7 +246,14 @@ import java.util.*;
 //		Scanner scanner = new Scanner(System.in);         
 //		System.out.print("숫자를 입력하세요:");
 //		int num = scanner.nextInt();       
-//		System.out.println("1부터"+num+"사이에 존재하는 3의 배수는"+num/3+"개입니다");
+//		int a=0;
+//		for(int i=1;i<=num;i++) {
+//			if(i%3==0) {
+//				a++;
+//			}
+//		}
+//		
+//		System.out.println("1부터"+num+"사이에 존재하는 3의 배수는"+a+"개입니다");
 //
 //	}
 //}
@@ -367,36 +364,99 @@ import java.util.*;
 //		}
 //	}
 //}
+//문제 16-2
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc= new Scanner(System.in);
+//		System.out.println("수를 입력하세요:");
+//		int num = sc.nextInt();
+//		int i;
+//		for(i=2;i<num;i++) {
+//			if(num%i==0) {
+//				break;
+//			}
+//		}
+//		if(num==i)
+//			System.out.println(num+"은 소수");
+//		else
+//			System.out.println(num+"은 소수가 아님");
+//	}
+//}
 //문제17
 //public class EX_Prg{
 //	public static void main(String[] args) {
-//		int j=0;
-//		int i;
-//		int h=0;
-//		for(i=2; j<10; i+=6) {
-//			h+=i;
-//			System.out.printf(i+"+");
-//			j++;
+//	
+//		int h=2;
+//		int sum=0;
+//		for(int i=1; i<=10; i++) {
+//			sum+=h;
+//			System.out.printf(h+"+");
+//			h+=6;
 //		}
-//		System.out.println();
-//		System.out.println("합="+h);
+//		System.out.println("\n합="+sum);
 //	}
 //}
 //문제 18
 //public class EX_Prg{
 //	public static void main(String[] args) {
-//		int j=0;
-//		int i=2;
-//		int h=3;
-//		int k=2;
-//		System.out.printf(i+" ");
-//		for(; j<9;) {
-//			i=i*h;
-//			k+=i;
-//		System.out.print(i+" ");
-//			j++;			
+//		int h=2;
+//		int sum=0;
+//		for(int i=1; i<=10; i++) {
+//			sum+=h;
+//			System.out.printf(h+"+");
+//			h*=3;
 //		}
-//		System.out.println("합="+k);
+//		System.out.println("\n합="+sum);
 //	}
 //}
 //문제 19
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc= new Scanner(System.in);
+//		System.out.println("수열의 개수:");
+//		int num = sc.nextInt();
+//		int a=0;
+//		int b=0;
+//		int c=1;
+//		int d=0;
+//		for(int i=0;i<num;i++) {
+//			System.out.printf(c+"+");
+//			a=b;
+//			b=c;
+//			c=a+b;
+//			d+=c;
+//		}
+//		System.out.println("합="+d);
+//	}
+//}
+//문제20-1
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int b=1;
+//		int c=0;
+//		for(int i=1;i<=7;i++) {
+//			System.out.printf(b+"+");
+//			c+=b;
+//			b+=i;
+//	}
+//		System.out.printf("\n합="+c);
+//	}
+//}
+//문제20-2
+public class EX_Prg{
+	public static void main(String[] args) {
+		int a;
+		int a2;
+		int sign=1;
+		int sum=0;
+		for(a=1;a<=10;a++) {
+			a2=a*sign;
+			System.out.print(a2+"");
+			if(a2<0)
+				System.out.print("+");
+			sign=-sign;
+		}
+		System.out.println("합:"+a2);
+	}
+}
+
