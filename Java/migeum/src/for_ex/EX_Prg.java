@@ -357,7 +357,7 @@ import java.util.*;
 //				}
 //				if(i==num) {
 //					System.out.println(num+"은 소수");
-//					break;
+//				break;
 //				}
 //				if(i>1) {
 //					System.out.println(num+"은 소수가 아님");
@@ -368,9 +368,35 @@ import java.util.*;
 //	}
 //}
 //문제17
-public class EX_Prg{
-	
-}
-
-
-
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int j=0;
+//		int i;
+//		int h=0;
+//		for(i=2; j<10; i+=6) {
+//			h+=i;
+//			System.out.printf(i+"+");
+//			j++;
+//		}
+//		System.out.println();
+//		System.out.println("합="+h);
+//	}
+//}
+//문제 18
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int j=0;
+//		int i=2;
+//		int h=3;
+//		int k=2;
+//		System.out.printf(i+" ");
+//		for(; j<9;) {
+//			i=i*h;
+//			k+=i;
+//		System.out.print(i+" ");
+//			j++;			
+//		}
+//		System.out.println("합="+k);
+//	}
+//}
+//문제 19
