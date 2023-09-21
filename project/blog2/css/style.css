@@ -158,20 +158,26 @@ main > .wrapper> section  *{
 }
 .about .right > h3{
     font-size: 3rem;
+    position: relative;
+    z-index: 6;
 }
 .about .sns i{
     font-size: 2rem;
     margin: 3px;
 }
 /*features*/
-.features  i{
+.features .card i{
     font-size: 3rem;
     color: rgb(248, 3, 3);
+    position: relative;
+    z-index: 5;
 }
 .features p{
     font-size: 2rem;
     color: rgb(25, 189, 137);
     word-break: break-all;
+    z-index: 7;
+    position: relative;
 }
 .card{
     background-color: #fff;
@@ -179,19 +185,34 @@ main > .wrapper> section  *{
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.features .card.in *{
+    color: #fff;
+    opacity: 1;
     
 }
-.card:hover {
-    background-color: rgb(224, 156, 153);
-    transform: scale(1.1);
-    
+.features .card h2{
+    position: relative;
+    z-index: 9;
 }
-.card:hover {
-    color: #06bdff;
+
+.features .card span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    transition: 0.5s;
+    background-color: tomato;
+    transform: scale(0);
+    opacity: 0;
 }
-.card:hover p{
+/* .card:hover p{
     color: #eeff03;
-}
+} */
 /*portfolio*/
 .portfolio{
     padding: 50px;
@@ -214,9 +235,13 @@ main > .wrapper> section  *{
     left: -50px;
 }
 .portfolio .moveBtn i:nth-child(2){
-    left: 300px;
+    left: 330px;
 }
-
+.portfolio .cardlist{
+    display: block;
+    margin: 0;
+    transform:none;
+}
 
 .portfolio .card{
     position: absolute;
@@ -226,6 +251,10 @@ main > .wrapper> section  *{
     border-radius: 3px;
     padding: 15px;
     margin-bottom: 30px;
+    opacity: 0;
+}
+.portfolio .card.on{
+    opacity: 1;
 }
 .portfolio .card img{
     width: 100%;
@@ -391,6 +420,7 @@ main > .wrapper> section  *{
     }
     .wrapper>.detail{
         display: flex;
+
         justify-content: space-between;
         
     }
@@ -398,10 +428,12 @@ main > .wrapper> section  *{
     .about  .detail >img{
         width: 50%;
     }
-    .features  .detail >.card,
-    .portfolio .detail>.card{
+    .features  .detail >.card{
         width: 30%;
     }
+    /* .portfolio .detail>.card{
+        width: 30%;
+    } */
     .contact .detail>.left{
         width: 35%;
         display: block;
@@ -412,4 +444,30 @@ main > .wrapper> section  *{
     .contact .card{
         width: 100%;
     }
+    /*포트폴리오 위치 재설정*/
+    .portfolio .detail{
+        width: 1000px;
+        height: 440px;
+        overflow: hidden;
+    }
+    .portfolio .card{
+        position: static;
+        opacity: 1;
+        width: 380px;
+    }
+    .portfolio .cardlist{
+        display: flex;
+        gap:50px;
+        position: relative;
+        margin: 0 200px;
+        transition: 0.5s;
+    }
+
+    .portfolio .moveBtn i:nth-child(1){
+        left: -100px;
+    }
+    .portfolio .moveBtn i:nth-child(2){
+        left: 1080px;
+    }
+    
 }
