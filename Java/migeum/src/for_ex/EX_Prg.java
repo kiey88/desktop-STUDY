@@ -443,20 +443,52 @@ import java.util.*;
 //	}
 //}
 //문제20-2
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int a;
+//		int a2;
+//		int sign=1;
+//		int sum=0;
+//		for(a=1;a<=10;a++) {
+//			a2=a*sign;
+//			System.out.print(a2);
+//			if(a2<0)
+//				System.out.print("+");
+//			sign=-sign;
+//			sum+=a2;
+//		}
+//		System.out.println("합:"+sum);
+//	}
+//}
+//문제20-3
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int a;
+//		int a2;
+//		int sign=1;
+//		int sum=0;
+//		for(a=5;a<=50;a+=5) {
+//			a2=a*sign;
+//			System.out.print(a2);
+//			if(a2<0)
+//				System.out.print("+");
+//			sign=-sign;
+//			sum+=a2;
+//		}
+//		System.out.println("합:"+sum);
+//	}
+//}
+//문제20-4
 public class EX_Prg{
 	public static void main(String[] args) {
-		int a;
-		int a2;
-		int sign=1;
-		int sum=0;
-		for(a=1;a<=10;a++) {
-			a2=a*sign;
-			System.out.print(a2+"");
-			if(a2<0)
-				System.out.print("+");
-			sign=-sign;
-		}
-		System.out.println("합:"+a2);
+		int b=1;
+		int c=0;
+		for(int i=1;i<=7;i++) {
+			System.out.printf(b+"+");
+			c+=b;
+			b+=i;
+	}
+		System.out.printf("\n합="+c);
 	}
 }
 
