@@ -39,10 +39,15 @@ li{
     width: 200px;
     padding: 50px 5px;
 }
+li > a{
+    color:#fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 p a{
     text-decoration: none;
-    color: rgb(249, 249, 249);
+    color: rgb(56, 49, 49);
     font-size: 30px;
     cursor: pointer;
 }
@@ -96,8 +101,18 @@ main > section{
     top: 0;
     left: 0;
 }
+/* .box1{
+    z-index: 4;
+}
+.box2{
+    z-index: 3;
+}
+.box3{
+    z-index: 2;
+} */
 .viewon{
     opacity: 1;
+    z-index: 5;
 }
 .viewon>p{
     transform: rotateY(360deg);
