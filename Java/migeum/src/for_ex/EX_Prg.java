@@ -499,23 +499,23 @@ import java.util.*;
 //		}
 //	}
 //문제 20-4-2
-public class EX_Prg{
-public static void main(String[] args) {
-	int b=1;
-	int c=0;
-	int b2, sign=1;
-	for(int i=1;i<=7;i++) {
-		b2=b*sign;
-		System.out.printf("%d", b2 );
-		if(b2<0)
-			System.out.printf("+");
-		c+=b2;
-		b+=i;
-		sign=-sign;
-}
-	System.out.printf("\n합="+c);
-}
-}
+//public class EX_Prg{
+//public static void main(String[] args) {
+//	int b=1;
+//	int c=0;
+//	int b2, sign=1;//i가 1일때 sigh은 1,2일때 sigh은 -1
+//	for(int i=1;i<=7;i++) {
+//		b2=b*sign; //b값1,2,4,7,11,16,22
+//		System.out.printf("%d", b2 );
+//		if(b2<0)
+//			System.out.printf("+");
+//		c+=b2;
+//		b+=i; //b값 2,4,7,12,16,22
+//		sign=-sign;
+//}
+//	System.out.printf("\n합="+c);
+//}
+//}
 //문제21
 //public class EX_Prg{
 //	public static void main(String[] args) {
@@ -539,20 +539,87 @@ public static void main(String[] args) {
 //		System.out.println("두번째 수:");
 //		int num1 =sc.nextInt();		
 //		int num2 =sc.nextInt();
+//		int a=0;
+//		int b=0;
 //		int sum=0;
+//		int sum1=0;
 //		int sum2=0;
+//		if(num1<num2) {
+//			a=num1;
+//			b=num2;
+//			a=a+1;
+//		}
+//		if(num1>num2) {
+//			a=num2;
+//			b=num1;
+//			num1=a;
+//			num2=b;			
+//			a=a+1;
+//		}
 //		
 //		System.out.println("사이의 수:");
-//		for(int i=1;num1<num2;i++,num2--) {
+//		for(int i=1;a<b;i++,a++) {
 //			sum=num1+i;
+//			sum1+=sum;
 //			System.out.printf(sum+" ");
 //			if(sum%2==1) {
 //				sum2+=sum;
 //			}
 //		}
 //		System.out.println();
-//		System.out.println("합="+sum);
+//		System.out.println("합="+sum1);
 //		System.out.println();
 //		System.out.println("홀수의합"+sum2);
 //	}
+//}
+//문제23
+//public class EX_Prg{
+//	public static void main (String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("정수입력:");
+//		int input = sc.nextInt();
+//
+//
+//		int divisor = 1;
+//		for (int temp = input; temp >= 10; temp /= 10) {
+//			divisor *= 10;
+//		}
+//		int sum=0;
+//		System.out.printf("각자리: ");
+//		for (; divisor >= 1; divisor /= 10) {
+//			int digit = input / divisor;
+//			sum+=digit;
+//			System.out.printf(digit+" ");
+//			input %= divisor;
+//		}
+//		System.out.println();
+//		System.out.println("합="+sum);
+//	}
+//}
+//문제 24
+//public class EX_Prg {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("정수입력:");
+//        int input = sc.nextInt();
+//
+//        int divisor = 1;
+//
+//        
+//        for (int temp = input; temp >= 10; temp /= 10) {
+//            divisor *= 10;
+//        }
+//
+//        int reversed = 0;
+//
+//        
+//        for (int newDivisor = 1; divisor >= 1; divisor /= 10) {
+//            int digit = input / divisor;
+//            reversed += digit * newDivisor;
+//            newDivisor *= 10;
+//            input %= divisor;
+//        }
+//
+//        System.out.println("output: " + reversed);
+//    }
 //}
