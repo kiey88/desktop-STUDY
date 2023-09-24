@@ -479,16 +479,80 @@ import java.util.*;
 //	}
 //}
 //문제20-4
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//			int b=1;
+//			int c=0;
+//			for(int i=1;i<=7;i++) {
+//				if(i%2==0) {
+//					System.out.printf(b+"+");
+//				}
+//				if(i%2==1) {
+//					System.out.printf(b+"-");
+//				}
+//				c+=b;
+//				b+=i;
+//				c=-c;
+//		}
+//			c=-c;
+//			System.out.printf("\n합="+c);
+//		}
+//	}
+//문제 20-4-2
 public class EX_Prg{
-	public static void main(String[] args) {
-		int b=1;
-		int c=0;
-		for(int i=1;i<=7;i++) {
-			System.out.printf(b+"+");
-			c+=b;
-			b+=i;
-	}
-		System.out.printf("\n합="+c);
-	}
+public static void main(String[] args) {
+	int b=1;
+	int c=0;
+	int b2, sign=1;
+	for(int i=1;i<=7;i++) {
+		b2=b*sign;
+		System.out.printf("%d", b2 );
+		if(b2<0)
+			System.out.printf("+");
+		c+=b2;
+		b+=i;
+		sign=-sign;
 }
-
+	System.out.printf("\n합="+c);
+}
+}
+//문제21
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		int i;
+//		int sum=0;
+//		for(i=1; i<=50;i++) {		
+//			if(i%5==0&&i%2==1) {
+//				System.out.print(i+" ");
+//				sum+=i;
+//			}
+//		}
+//		System.out.println("\n합="+sum);
+//	}
+//}
+//문제22
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		
+//		Scanner sc= new Scanner(System.in);
+//		System.out.println("첫번째 수:");
+//		System.out.println("두번째 수:");
+//		int num1 =sc.nextInt();		
+//		int num2 =sc.nextInt();
+//		int sum=0;
+//		int sum2=0;
+//		
+//		System.out.println("사이의 수:");
+//		for(int i=1;num1<num2;i++,num2--) {
+//			sum=num1+i;
+//			System.out.printf(sum+" ");
+//			if(sum%2==1) {
+//				sum2+=sum;
+//			}
+//		}
+//		System.out.println();
+//		System.out.println("합="+sum);
+//		System.out.println();
+//		System.out.println("홀수의합"+sum2);
+//	}
+//}
