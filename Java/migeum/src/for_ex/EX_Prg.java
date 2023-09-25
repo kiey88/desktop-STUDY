@@ -572,6 +572,38 @@ import java.util.*;
 //		System.out.println("홀수의합"+sum2);
 //	}
 //}
+//문제 22-2
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		
+//		Scanner sc= new Scanner(System.in);
+//		System.out.println("첫번째 수:");
+//		System.out.println("두번째 수:");
+//		int num1 =sc.nextInt();		
+//		int num2 =sc.nextInt();
+//
+//		int sum1=0;
+//		int sum2=0;
+//		int tmp;
+//		if(num1>num2) {
+//			tmp=num1;
+//			num1=num2;
+//			num2=tmp;
+//		}
+//		System.out.println("사이의 수:");
+//		for(int i=num1+1;i<num2;i++) {
+//			System.out.printf(i+" ");
+//			sum1+=i;
+//			if(i%2==1) {
+//				sum2+=i;
+//			}
+//		}
+//		System.out.println();
+//		System.out.println("합="+sum1);
+//		System.out.println();
+//		System.out.println("홀수의합"+sum2);
+//	}
+//}
 //문제23
 //public class EX_Prg{
 //	public static void main (String[] args) {
@@ -623,20 +655,60 @@ import java.util.*;
 //        System.out.println("output: " + reversed);
 //    }
 //}
+//문제24-1
+//public class EX_Prg {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("정수입력:");
+//        int input = sc.nextInt();
+// 
+//        System.out.println("output:");
+//        for(    ;input>0;) {
+//        	System.out.printf("%d ",input%10);
+//        	input/=10;
+//        }
+//    }
+//}
 //문제 25
+//public class EX_Prg{
+//	public static void main(String[] args) {
+//		Scanner sc= new Scanner(System.in);
+//		int a=0;
+//		System.out.println("정수를 입력하세요:");
+//		int i; 
+//		int sum = 0;
+//		for(i=0; ;i++) {
+//			a = sc.nextInt();
+//			if(a==999)
+//				break;
+//			System.out.println("정수를 입력하세요:");
+//			sum+=a;
+//		}
+//		System.out.println("합:"+(sum));
+//		System.out.println("평균"+sum/i);
+//	}	
+//}
+//문제26
 public class EX_Prg{
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		int a=0;
-		System.out.println("정수를 입력하세요:");
-		int i; 
-		int sum = 0;
-		for(i=1;a<1000;i++) {
-			a = sc.nextInt();
-			System.out.println("정수를 입력하세요:");
-			sum+=a;
+		System.out.println("입력될 수의 개수:");
+		int input = sc.nextInt();
+		int num1 ;
+		int max=Integer.MIN_VALUE;
+		int min=Integer.MAX_VALUE;
+		for(int i=1;i<=input;i++) {
+			System.out.println(i+"번째수:");
+			num1 = sc.nextInt();
+
+			if(num1>max) {
+				max=num1;
+			}
+			if(num1<min) {
+				min=num1;
+			}
 		}
-		System.out.println("합:"+sum);
-		System.out.println("평균"+sum/i);
-	}	
+		System.out.println("최대값:"+max);
+		System.out.println("최소값:"+min);
+	}
 }
