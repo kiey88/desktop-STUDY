@@ -623,3 +623,20 @@ import java.util.*;
 //        System.out.println("output: " + reversed);
 //    }
 //}
+//문제 25
+public class EX_Prg{
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int a=0;
+		System.out.println("정수를 입력하세요:");
+		int i; 
+		int sum = 0;
+		for(i=1;a<1000;i++) {
+			a = sc.nextInt();
+			System.out.println("정수를 입력하세요:");
+			sum+=a;
+		}
+		System.out.println("합:"+sum);
+		System.out.println("평균"+sum/i);
+	}	
+}
