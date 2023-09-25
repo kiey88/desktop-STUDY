@@ -29,6 +29,7 @@ body{
 html,button{
     font-size: 10px;
     font-family: 'Caveat', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 nav{
@@ -334,7 +335,7 @@ section > .title > h2{
 /*pc형*/
 @media all and (min-width:1024px){
     html{
-        font-size: 14px;
+        font-size: 12.5px;
     }
     
     main > section{

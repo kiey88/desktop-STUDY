@@ -30,6 +30,7 @@ body{
 html,button{
     font-size: 10px;
     font-family: 'Caveat', cursive;
+    
 }
 
 nav{
@@ -173,8 +174,8 @@ main > .wrapper> section  *{
     z-index: 5;
 }
 .features p{
-    font-size: 2rem;
-    color: rgb(25, 189, 137);
+    font-size: 1.3rem;
+    color: rgb(32, 40, 10);
     word-break: break-all;
     z-index: 7;
     position: relative;
