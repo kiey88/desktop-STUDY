@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동영상 설정</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            height: 500vh;
+        }
+        body.before-load{
+            overflow-y: hidden;
+        }
+        video{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="before-load">
+    <video src="./image/Green.mp4"></video>
+    <script>
+        const elemVideo = document.querySelector('video');
+        const onScroll = () => {
+            const{scrollHeight,clientHeight,scrollTop} = document.documentElement;
+            const realHeight = scrollHeight - clientHeight
+            const percent = ( scrollTop / realHeight);
+            console.log("realheight:",realHeight)
+            console.log("scrollTop:",scrollTop)
+            console.log("percent:",percent)
+            elemVideo.currentTime = elemVideo.duration*percent;
+        }
+        const init = () => {
+            document.body.classList.remove("before-load");
+            window.addEventListener('scroll',onScroll);
+        }
+        elemVideo.addEventListener('loadeddata',()=>{
+            console.log("동영상 로드 완료")
+            init();
+        })
+    </script>
+</body>
+</html>

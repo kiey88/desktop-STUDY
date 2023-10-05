@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS 설정</title>
+    <style>
+        #draw{
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="draw" width="300" height="300">
+        
+    </canvas>
+    <script>
+        const canvas = document.querySelector('#draw');
+        if(canvas.getContext){
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = '#000';
+            ctx.fillRect(10,10,50,50);
+            ctx.strokeRect(60,60,100,100);
+            ctx.moveTo(160,160);
+            ctx.lineTo(300,200);
+            ctx.stroke();
+            ctx.closePath();
+        }
+    </script>
+</body>
+</html>
