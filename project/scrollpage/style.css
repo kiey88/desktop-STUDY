@@ -17,11 +17,15 @@ section{
 
 
 /*** 구역 나눠서 표시 ***/
+video{
+    position: absolute;
+    width: 100%;
+}
 .sec1{ 
-    background-color: rgba(87, 68, 147, 0.678);
+    /* background-color: rgba(87, 68, 147, 0.678); */
     
 }
-.sec2{ background-color: black;}
+.sec2{ background-color: rgb(0, 0, 0);}
 
 /*** section-1 ***/
 .sec1{
@@ -54,6 +58,7 @@ section{
     font-size: 10rem;
     font-weight: bolder;
     position: relative;
+    color: #f01360;
     z-index: 1;
 }
 .sec1 > .circle{
@@ -126,14 +131,16 @@ section{
 .sec2 > .indicator{
     position: absolute;
     width: 100%;
-    padding: 30px;
+    padding: 2px;
     bottom: 30px;
     box-sizing: border-box;
+    border: solid #f60707;
 }
 .sec2 > .indicator > .bar{
     width: 0;
     height: 20px;
     background-color: #888;
+    
 }
 .slider > li{
     border-radius: 50%;
