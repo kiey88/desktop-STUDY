@@ -48,7 +48,7 @@
 </head>
 <body class="before-load">
     <h1>HELLO</h1>
-    <canvas class="scroll-img" width="1920" height="1000"></canvas>
+    <canvas class="scroll-img" width="1920" height="1080"></canvas>
     <div class="sticky">
         <p class="mag-1">Je suis content de vous rencontrer</p>
         <p class="mag-2">안냥하삼?</p>
@@ -59,15 +59,15 @@
         const context = canvas.getContext('2d');
         const elemMsg = document.querySelectorAll('.sticky>p');
         
-        const TOTAL_IMG = 117;
+        const TOTAL_IMG = 675;
         const videoImg = [];
         const calcPartRate = (rate,part,flag)=>{
             return (rate-part)*(flag)*10;
         }
         const setImages =() =>{
-            for(let i=0 ; i<TOTAL_IMG; i++){
+            for(let i=1 ; i<=TOTAL_IMG; i++){
                 let elemImg = new Image();
-                elemImg.src = `./image/seq/${i}.jpg`;
+                elemImg.src = `./image/seq2/${i}.jpg`;
                 videoImg.push(elemImg);
             }
             }
