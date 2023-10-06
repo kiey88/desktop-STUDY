@@ -21,10 +21,7 @@ video{
     position: absolute;
     width: 100%;
 }
-.sec1{ 
-    /* background-color: rgba(87, 68, 147, 0.678); */
-    
-}
+
 .sec2{ background-color: rgb(0, 0, 0);}
 
 /*** section-1 ***/
@@ -35,16 +32,13 @@ video{
     align-items: center;
 }
 
-/* .sec1 > .bg{
-    width: 72%;
-    height: 50vh;
-    background-color: tomato; 
-    background: linear-gradient(50deg, rgba(10,30,240,1) 0%, rgba(255,0,74,0.02573529411764708) 70%);    
-    animation: fill 3s ease-in-out;
-    position: relative;
-}  
-*/
-@keyframes fill {
+.sec1>p:hover{
+    color: #ff0000;
+    cursor: crosshair;
+}
+
+
+/* @keyframes fill {
     0%{
         left: -100%;
         opacity: 0;
@@ -53,7 +47,7 @@ video{
         left: 0;
         opacity: 1;
     }
-}
+} */
 .sec1 > p{
     font-size: 10rem;
     font-weight: bolder;
@@ -71,7 +65,7 @@ video{
     width: 200px;
     height: 200px;
     /* background-color: tomato; */
-    border: 1px solid #fff;
+    border: 1px solid #fee507;
     border-radius: 40% 60% 25% 35% / 40% 45% 35% 60%;
     position: absolute;
     top: 0;
@@ -148,21 +142,49 @@ video{
 .slider>li:nth-of-type(1){
     background-image: url(./img/001.png);
 }
+.slider>li:nth-of-type(1):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
 .slider>li:nth-of-type(2){
     background-image: url(./img/002.png);
+}
+.slider>li:nth-of-type(2):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
 }
 .slider>li:nth-of-type(3){
     background-image: url(./img/003.png);
 }
+.slider>li:nth-of-type(3):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
 .slider>li:nth-of-type(4){
     background-image: url(./img/004.png);
+}
+.slider>li:nth-of-type(4):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
 }
 .slider>li:nth-of-type(5){
     background-image: url(./img/005.png);
 }
+.slider>li:nth-of-type(5):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
 .slider>li:nth-of-type(6){
     background-image: url(./img/006.png);
 }
+.slider>li:nth-of-type(6):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
 .slider>li:nth-of-type(7){
     background-image: url(./img/007.png);
+}
+.slider>li:nth-of-type(7):hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
 }
