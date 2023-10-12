@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웨일온</title>
-    <link rel="stylesheet" href="./theme.css">
     <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
         body{
             background-size: cover;
         }
@@ -17,14 +17,52 @@
             font-size:5rem;
             color: aliceblue;
         }
+        .loginName{
+            display: none;
+        }
+        #loginForm,.loginName{
+            position: absolute;
+            width: 20%;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 10px auto;
+        }
+        #loginForm{
+            display: flex;
+        }
+        #loginForm>label,.loginName>i{
+            padding: 5px;
+            width: 10%;
+            background-color: #e9e7e7;
+            text-align: center;
+            border-radius: 5px 0 0 5px;
+        }
+        #loginForm>input{
+            width: 90%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            background-color: #e9e7e7;
+        }
+
     </style>
 </head>
 <body>
-    <button class="theme">
-        Toggle Theme
-    </button>
+    <p class="loginName">Hello</p>
+    <form id="loginForm">
+        <label><i class="fa-solid fa-right-to-bracket fa-beat-fade" style="color: #07567e;"></i></label>
+        <input type="text" placeholder="로그인 이름을 입력하세요">
+    </form>
     <div id="clock"></div>
-    <script src="./theme.js"></script>
+    <form id="todoForm">
+        <input type="text" placeholder="할일을 입력하세요">
+    </form>
+    <ul class="todoUl"></ul>
     <script src="./background.js"></script>
+    <script src="./todos.js"></script>
+    <script src="./clock.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>
