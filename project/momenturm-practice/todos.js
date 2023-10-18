@@ -1,5 +1,7 @@
 const elemTodoForm = document.querySelector('#todoForm');
 const elemUl = document.querySelector('.todoUl');
+const elemH2 = document.querySelector('h2');
+const elemClose = document.querySelector('.todo > button')
 const TODO_KEY = 'TODOS';
 let arrTodo = [];
 
@@ -55,8 +57,14 @@ const onEventFormSubmit = (event) => {
     addTodoList(Date.now(),txt); 
     saveLocalStorage();
 }
+const onClickTodo = ()=>{
+    const obj = document.querySelector('.todo');
+        obj.classList.toggle('cls-view');
+}
 const todos_init = () => {
     readLocalStorage();
-    elemTodoForm.addEventListener('submit',onEventFormSubmit);    
+    elemTodoForm.addEventListener('submit',onEventFormSubmit);
+    elemH2.addEventListener('click',onClickTodo);
+    elemClose.addEventListener('click',onClickTodo)
 }
 todos_init();

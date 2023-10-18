@@ -23,9 +23,12 @@ html{
 }
 
 body{    
-    height: 580vh;
+    height: 500vh;
     min-width: 320px;
-    /* width: 100%; */
+    width: 100%;
+}
+section{
+    height: 100vh;
 }
 html,button{
     font-size: 10px;
@@ -35,7 +38,6 @@ html,button{
 
 nav{
     display: flex;
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -44,9 +46,7 @@ nav{
     align-items: center;
     padding: 0.2rem 3rem;
     color: #ff0101;
-    
     z-index: 10;
-
 }
 
 .on{
@@ -140,10 +140,7 @@ main > section{
     align-items: center;
 }
 main > section > .wrapper{
-    
-    width: 70%;
-    
-    
+    width: 98%;
 }
 main > .wrapper> section  *{
     margin: 7px 0;
@@ -156,14 +153,14 @@ main > .wrapper> section  *{
     font-size: 2rem;
 }
 .wrapper > .title > h2{
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bolder;
 }
 
 /*about*/
 .about img{
-    width: 70%;
-    height: 40rem;
+    width: 220px;
+    height: 30rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -198,6 +195,7 @@ main > .wrapper> section  *{
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 .features .card.in *{
     color: #fff;
@@ -284,8 +282,23 @@ main > .wrapper> section  *{
 .portfolio .card p{
     font-size: 2.5rem;
 }
-
-
+.linkbtn{
+    position: relative;
+    top: 20px;
+    left: 20%;
+}
+.linkbtn>button>a{
+    font-weight: bolder;
+    font-size: 15px;
+}
+.linkbtn>button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.linkbtn>button:hover{
+    background-color: #a4a8bc;
+}
 /*background fixed*/
 .bg{
     
@@ -333,7 +346,7 @@ main > .wrapper> section  *{
     border: 1px solid #fff;
     border-radius: 3px;
     padding: 10px;
-    
+    height: 42vh;
     position: relative;
 }
 
@@ -345,7 +358,7 @@ main > .wrapper> section  *{
     padding:7px
 }
 .contact form textarea{
-    height: 200px;
+    height: 110px;
     resize: none;
 }
 .contact form input:focus,
@@ -383,6 +396,7 @@ main > .wrapper> section  *{
     cursor: pointer;
 }
 
+
 /* animation */
 @keyframes blink{
     0%{opacity: 1;}
@@ -398,6 +412,10 @@ main > .wrapper> section  *{
 @media all and (min-width: 768px){
     html{
         font-size: 12px;
+    }
+    body{    
+        height: 500vh;
+        min-width: 320px;
     }
     nav{
         display: flex;
@@ -431,6 +449,10 @@ main > .wrapper> section  *{
         margin: 20px auto;
         width: 100%;
     }
+    .wrapper > .title > h2{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
     .features > .detail,
     .portfolio > .detail{
         display: flex;
@@ -443,6 +465,10 @@ main > .wrapper> section  *{
     }
     .about>.detail{
         padding: auto 20px;
+    }
+    .about  .detail >img{
+        width: 40%;
+        height: 30rem;
     }
     .portfolio{
         padding: 20px 150px;
@@ -461,11 +487,26 @@ main > .wrapper> section  *{
     .portfolio .moveBtn i:nth-child(2){
         left: 350px;
     }
+    .contact form{
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 10px;
+        position: relative;
+    }
+    .contact form textarea{
+        height: 200px;
+        resize: none;
+    }
 }
 /*pc형*/
 @media all and (min-width:1024px){
     html{
         font-size: 14px;
+    }
+    body{    
+        height: 500vh;
+        min-width: 320px;
     }
     nav{
         display: flex;
@@ -497,6 +538,10 @@ main > .wrapper> section  *{
         max-width: 1024px;
         margin: 50px auto;
     }
+    .wrapper > .title > h2{
+        font-size: 4rem;
+        font-weight: bolder;
+    }
     .wrapper>.detail{
         display: flex;
 
@@ -505,7 +550,8 @@ main > .wrapper> section  *{
     }
     
     .about  .detail >img{
-        width: 50%;
+        width: 40%;
+        height: 40rem;
     }
     .features  .detail >.card{
         width: 30%;
@@ -555,5 +601,16 @@ main > .wrapper> section  *{
     .portfolio .moveBtn i:nth-child(2){
         left: 1080px;
     }
-    
+    .contact form{
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 10px;
+        height: 45vh;
+        position: relative;
+    }
+    .contact form textarea{
+        height: 200px;
+        resize: none;
+    }
 }
