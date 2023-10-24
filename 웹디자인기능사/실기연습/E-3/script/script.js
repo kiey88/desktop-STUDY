@@ -12,4 +12,10 @@ $(function(){
             $('.slide-wrap').css({'margin-top':'0'});
         });
     },3000);
+    $('.notice>div>a:nth-of-type(1)').click(function(){
+        $('.popup-wrap').show();
+    });
+    $('.popup>button').click(function(){
+        $('.popup-wrap').hide();
+    });
 });

@@ -39,15 +39,69 @@ main{
 .banner{
     height: 150px;
     width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.banner a{
+    padding: 0 10px;
+}
+.banner>a>img{
+    width: 100%;
+}
+.banner>a:nth-of-type(1){
+    width: 30%;
+}
+.banner>div{
+    width: 80%;
+}
+.banner>div>a{
+    padding: 5px 0;
+}
+.banner>div>:nth-of-type(1){
+    font-weight: bolder;
+}
+
 .notice{
     height: 40%;
     width: 400px;
 }
+.notice>h2{
+    padding-top: 70px;
+}
+.notice>div>a{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+}
+.notice>div>a>p{
+    text-wrap: nowrap;
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
 .gallary{
-    height: 40%;
+    height: 41%;
     width: 400px;
 }
+.gallary>h2{
+    padding-top: 70px;
+}
+
+.gallary-wrap{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+.gallary-01>a>img:hover .img1{
+    opacity: 0.5;
+}
+.gallary-02>a>img:hover .img2{
+    opacity: 0.5;
+}
+
 .slide{
     width: calc(100vw - 600px);
     height: calc(100vh - 100px);
@@ -55,6 +109,7 @@ main{
 }
 .slide-wrap{
     height: 300%;
+    width: 100%;
 }
 .slide-wrap>a{
     width: 100%;
@@ -62,13 +117,30 @@ main{
     
 }
 .slide-item>img{
+    width: 100%;
+    height: 100%;
     object-fit: fill;
+    
+}
+footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content:first baseline;
+    align-items: center;
+}
+.f-logo{
+    height: 100px;
+    width: 200px;
+}
+.f-logo>a{
     width: 100%;
     height: 100%;
 }
-footer{
-    height: calc(100vh - (100vh - 100px));
-    width: 100vw;
+.f-logo>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 .h-logo{
     background-image: url(./images/logo.png);
@@ -76,4 +148,44 @@ footer{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+.f-text{
+    
+    width: 60%;
+    height: 100%;
+    
+}
+.f-text>p{
+    padding-top: 30px;
+}
+.sns{
+    font-size: 40px;
+    font-weight: bolder;
+    width: 20%;
+    height: 100px;
+}
+.sns>p{
+    
+    
+    width: 70%;
+    height: 100px;
+    line-height: 100%;
+    text-align: center;
+    
+}
+.popup-wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: #fff;
 }
