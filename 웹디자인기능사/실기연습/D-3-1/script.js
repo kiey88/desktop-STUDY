@@ -5,4 +5,8 @@ $(function(){
     $('.main-menu').mouseleave(function(){
         $(this).find('.sub-menu').stop().fadeOut();
     });
+    setInterval(function(){
+        $('.slide:first').fadeOut(3000).next().fadeIn(3000);
+        $('.slide:first').appendTo('.container');
+    },4000)
 });
